@@ -1,0 +1,27 @@
+//Buttons
+
+#Container {
+    .btn {
+        text-decoration: none;
+        border-width: 2px;
+        background-color: transparent;
+        display: inline-block;
+        margin-bottom: 0;
+        font-weight: bold;
+        text-align: center;
+        vertical-align: middle;
+        cursor: pointer;
+        border: 2px solid #79a0ba;
+        white-space: nowrap;
+        padding: 6px 12px;
+        font-size: 14px;
+        line-height: 1.42857;
+        border-radius: 20px;
+        margin-top: 5px;
+
+        @include md {
+            margin-bottom: 20px;
+        }
+
+    }
+}    

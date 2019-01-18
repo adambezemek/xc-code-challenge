@@ -1,0 +1,17 @@
+//Footer
+
+#Footer {
+    float: left;
+    padding-top: 7%;
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+    
+    .footer-mod {
+        @include sm {
+            content:url("../img/FooterM.jpg");
+        }
+    }
+}

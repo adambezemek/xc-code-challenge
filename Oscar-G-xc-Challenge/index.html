@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>Oscar Gonzalez Xcentium Challenge</title>
+  <meta name="description" content="Oscar Gonzalez code challenge for Xc">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css?family=Bitter" rel="stylesheet">
+</head>
+<body>
+  
+  <div class="Page-Container">
+    
+    <div id="Header"></div>
+    
+    <div id="Container">
+      <div class="Featured">
+        <div id="box1" class="featured-mod" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img id="drag1" draggable="true" ondragstart="drag(event)">  
+        </div>
+        <div id="Content-one" class="text-content">
+            <h3>Introduction to Habitat</h3>
+            <p>Sitecore Habitat is a range of sites demonstrating the capabilities of the Sitecore Experience Platform.</p>
+            <p>The solution is built on the Sitecore Helix guidelines, which focuses on increasing productivity and quality in Sitecore projects.</p>
+            <a href="#" track="" class="btn">Read More</a>
+        </div>
+      </div>
+      <div class="Featured">
+        <div id="box2" class="featured-mod" ondrop="drop(event)" ondragover="allowDrop(event)">
+          <img id="drag2" draggable="true" ondragstart="drag(event)">
+        </div>
+        <div id="Content-two" class="text-content">
+            <h3>Modules</h3>
+            <p>The Habitat example implementation has a range of modules which covers the basics of a Sitecore website.</p>
+            <a href="#" track="" class="btn">Read More</a>
+        </div>
+      </div>
+      <div class="Featured">
+        <div id="box3" class="featured-mod" ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img id="drag3" draggable="true" ondragstart="drag(event)">
+        </div>
+        <div id="Content-three" class="text-content">
+            <h3>Getting Started</h3>
+            <p>Sitecore Helix a defined methodology with conventions and practises - Habitat is an example implementation available for your understanding.</p>
+            <a href="#" track="" class="btn">Read More</a>
+        </div>
+      </div>    
+    </div>
+    <div id="Footer"></div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script>
+    //Sorts Image on drag and drop - Now with Javascript//
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("src", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            const src = document.getElementById(ev.dataTransfer.getData("src"));
+            const srcParent = src.parentNode;
+            const tgt = ev.currentTarget.firstElementChild;
+
+            ev.currentTarget.replaceChild(src, tgt);
+            srcParent.appendChild(tgt);
+        }
+
+  </script>
+</body>
+</html>
