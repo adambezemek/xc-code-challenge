@@ -2,13 +2,9 @@
 
 ## Description
 
-The requested three-item content grid has been developed with the help of Sass. The page is fully responsive without the use of any CSS Frameworks. The user is able to swap any of the images inside the three mods, just click on drop for the images to change positions.
+The requested three-item content grid has been developed with the help of Sass. The page is fully responsive without the use of any CSS Frameworks. The user is able to swap any of the images inside the three mods by dragging and dropping them.
 
 Webpack has been used on this project with the task of starting a local server that watches the HTML, JS or SASS (CSS) files for any changes and rebuilds locally on save. 
-
-**To access the local server just type on your command console: npm start**
-
-To output the distribution assets, just type **npm run build**
 
 ## Directions:
 
