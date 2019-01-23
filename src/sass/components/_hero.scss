@@ -1,0 +1,28 @@
+.hero-shot {
+    background-color: $white;
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: cover;
+    color: $body-font-color; 
+    min-height: 231px; 
+    
+    
+    //TODO: fiddle with the top half of footer so it functions? 
+    //Extra small screesn 
+    @media (max-width: $screen-sm) {
+        background-image: url(./../assets/images/mobile-hero.png);
+    }
+    //Small Screens TODO: Combine xs and sm? 
+    @media (min-width: $screen-sm) {
+        background-image: url(./../assets/images/mobile-hero.png);
+    }
+    //Tablet/low res laptop
+    @media (min-width: $screen-md) {
+        background-image: url(./../assets/images/medium-hero.png);
+    }
+    //Desktop
+    @media (min-width: $screen-lg) {
+        height: 514px;
+        background-image: url(./../assets/images/desktop-hero.png)
+    }    
+}

@@ -1,0 +1,28 @@
+.header {
+    background-color: $bg-blue;
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: contain;
+    color: $white; 
+    min-height: 70px; 
+    
+    //Extra small screesn 
+    @media (max-width: $screen-sm) {
+        background-image: url(./../assets/images/mobile-header.png);
+    }
+    //Small Screens
+    @media (min-width: $screen-sm) {
+        height: 100px;
+        background-image: url(./../assets/images/mobile-header.png);
+    }
+    //Tablet/low res laptop
+    @media (min-width: $screen-md) {
+        height: 197px;
+        background-image: url(./../assets/images/medium-header.png);
+    }
+    //Desktop
+    @media (min-width: $screen-lg) {
+        height: 123px;
+        background-image: url(./../assets/images/desktop-header.png)
+    }
+}

@@ -1,0 +1,70 @@
+@import 'variables.scss';
+@import 'components/components.scss';
+
+//All styles 
+* {
+  font-family: 'Cambria', Georgia, Garamond, serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale; 
+  box-sizing: border-box;
+  margin: 0px;  
+  padding: 0px; //necessary? 
+}
+
+body {
+    //Extra small screesn 
+    @media (max-width: $screen-sm) {
+    }
+    //Small Screens
+    @media (min-width: $screen-sm) {
+    }
+    //Tablet/low res laptop
+    @media (min-width: $screen-md) {
+    }
+    //Desktop
+    @media (min-width: $screen-lg) {
+    }
+}
+
+.img-responsive {
+    max-width: 100%; 
+    height: auto; 
+    margin: 0 auto; 
+}
+
+.img-wrap {
+    text-align: center;
+}
+
+.text-wrap {
+    color: $body-font-color; 
+    max-width: 500px;
+    h2 {
+        margin-bottom: 10px;
+    }
+    p {
+        margin-bottom: 15px;
+    }
+}
+
+.btn {
+    color: $body-font-color; 
+    font-weight: bold;
+    text-decoration: none;
+    border: 3px solid $body-font-color;
+    border-radius: 25px;
+    padding: 5px; 
+    display: inline-block;
+}
+
+.hide-xs {
+    @media (max-width: $screen-sm) {
+        display: none;
+    }
+}
+
+.show-xs { 
+    @media (min-width: $screen-sm) {
+        display: none;
+    }
+}

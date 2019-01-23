@@ -1,0 +1,29 @@
+.download{
+    background-color: $bg-alt;
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: contain;
+    color: $white; 
+    min-height: 527px; 
+    
+    
+    //Extra small screesn 
+    @media (max-width: $screen-sm) {
+        height: 836px;
+        background-image: url(./../assets/images/mobile-download.png);
+    }
+    //Small Screens TODO: Combine xs and sm? 
+    @media (min-width: $screen-sm) {
+        height: 836px; 
+        background-image: url(./../assets/images/mobile-download.png);
+    }
+    //Tablet/low res laptop
+    @media (min-width: $screen-md) {
+        height: 773px; 
+        background-image: url(./../assets/images/medium-download.png);
+    }
+    //Desktop
+    @media (min-width: $screen-lg) {
+        background-image: url(./../assets/images/desktop-download.png)
+    }
+}

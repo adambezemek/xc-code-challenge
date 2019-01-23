@@ -1,0 +1,30 @@
+.grid {
+    display: flex; 
+    margin: 0 auto; 
+    .col {
+        padding: 10px;  
+        @media (max-width: $screen-sm) {
+            display: flex;
+            justify-content: center;
+        }
+        @media (min-width: $screen-sm) {
+            flex: 0 0 33.3333%; //handles splitting columns evenly. Otherwise it'll work based off content. 
+        }
+    }
+    @media (max-width: $screen-sm) {
+        flex-direction: column;
+        
+    }
+    @media (min-width: $screen-sm) {
+        justify-content: space-around;
+        max-width: 1330px;
+    }
+    //Tablet/low res laptop
+    @media (min-width: $screen-md) {
+
+    }
+    //Desktop
+    @media (min-width: $screen-lg) {
+
+    }
+}

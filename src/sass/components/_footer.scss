@@ -1,0 +1,31 @@
+.footer{
+    background-color: $bg-blue;
+    background-repeat: no-repeat; 
+    background-position: center;
+    background-size: contain;
+    color: $white; 
+    min-height: 70px; 
+    
+    
+    //TODO: fiddle with the top half of footer so it functions? 
+    //Extra small screesn 
+    @media (max-width: $screen-sm) {
+        height: 994px;
+        background-image: url(./../assets/images/mobile-footer.png);
+    }
+    //Small Screens TODO: Combine xs and sm? 
+    @media (min-width: $screen-sm) {
+        height: 994px;
+        background-image: url(./../assets/images/mobile-footer.png);
+    }
+    //Tablet/low res laptop
+    @media (min-width: $screen-md) {
+        height: 611px;
+        background-image: url(./../assets/images/medium-footer.png);
+    }
+    //Desktop
+    @media (min-width: $screen-lg) {
+        height: 423px;
+        background-image: url(./../assets/images/desktop-footer.png)
+    }
+}
