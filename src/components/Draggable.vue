@@ -4,49 +4,52 @@
             <img class="img-responsive" 
                 :src="img" 
                 draggable="true" 
-                @mousedown="mouseDown"
-                @mousemove="activeDrag" 
-                @mouseup="mouseUp" />
+                :id="i" 
+             />
         </div>
     </div>
 </template>
 
 <script>
-import img1 from "../assets/images/cta1.png"
-import img2 from "../assets/images/cta2.png"
-import img3 from "../assets/images/cta3.png"
 
     export default {
         name: 'Draggable',
         data() {
-            return {
-                imgurls: [
-                    img1, 
-                    img2, 
-                    img3
-                ], 
-                dragging: false, //aren't actively moving unless click
+            return { 
+                draggedEl: "" //The original element being dragged. 
             }
         }, 
+        props: [
+          'imgurls'
+        ],
         methods: {
-            mouseDown(event) { //gather info when press
-              this.dragging = true;
-              console.log(event);
-
-            },
-            mouseUp(event) { //grabs info when let go - will be used to compare to original placement
-              this.dragging = false; 
-              console.log(event);
+            dragStart(e) {
+                this.draggedEl = e.target.id;
+                //console.log(this.draggedEl);
             }, 
-            activeDrag(event) {
-                if (this.dragging) {
-                    mousemove(event);
+            drop(e) {
+                e.preventDefault(); //stopping the default "picture" action in this case. Zooming in. 
+                const dropZone = e.target.id; //the element being switched. Element being dropped ON  
+                if(this.draggedEl !== dropZone) {
+                    let updatedList = []; 
+                    //have to loop through existing array to create a new one. Can't set new array to current - occupies same place in memory. 
+                    this.imgurls.forEach((imgurl, i) => {
+                        updatedList[i] = imgurl;
+                    });
+                    //literal swapping of element ids 
+                    updatedList[dropZone] = this.imgurls[this.draggedEl];
+                    updatedList[this.draggedEl] = this.imgurls[dropZone];
+                    //have to tell our parent that we're done and it can update. It's needed for church honey, NEXT https://i.redd.it/bmojp48j6t401.jpg
+                    this.$emit('orderUpdated', updatedList);
                 }
+                this.draggedEl = ""; //reset our dragged element to blank, ready to be reused.
             }
-
         }, 
         mounted: function () {
-            window.addEventListener('mouseup', this.mouseUp);
+            window.addEventListener('dragstart', this.dragStart);
+            window.addEventListener('drop', this.drop);
+            window.addEventListener('dragenter', (e) => e.preventDefault());
+            window.addEventListener('dragover', (e) => e.preventDefault());
         }   
     }
 
