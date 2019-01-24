@@ -1,7 +1,10 @@
 <template>
     <header class="header">
-        <!-- TODO: Actually build this out. At least make logo separate, nav, etc--> 
-        <!--<img alt="Habitat Logo" src="../assets/logo.png">-->
+        <a href="#" class="h-nav h-col show-sm"><i class="fas fa-bars"></i></a> 
+        <a href="index.html"><img class="h-col show-sm" alt="Habitat Logo" src="../assets/images/logo.png" ></a>
+        <div class="h-col h-space  show-sm"></div>
+        <a href="#" class="h-col show-sm"><i class="fas fa-globe-americas"></i></a>
+        <a href="#" class="h-col show-sm"><i class="fas fa-search"></i></a>
         
     </header>
     
