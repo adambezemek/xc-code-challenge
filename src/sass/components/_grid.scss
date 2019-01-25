@@ -11,6 +11,8 @@
             flex: 0 0 33.3333%; //handles splitting columns evenly. Otherwise it'll work based off content. 
         }
     }
+
+
     @media (max-width: $screen-sm) {
         flex-direction: column;
         
@@ -27,4 +29,18 @@
     @media (min-width: $screen-lg) {
 
     }
+}
+
+.h-col {
+    flex: 1;
+    display: flex;
+    align-items: center; 
+}
+
+.h-col-end {
+    justify-content: flex-end; 
+}
+
+.h-col-center {
+    justify-content: center;
 }

@@ -6,48 +6,68 @@
     color: $white; 
     min-height: 70px; 
     display: flex;
+    font-family: $sans-serif;
     //margin: 0 auto; 
+
+    .icons {
+        margin-left: 20px;
+        margin-right: 20px;
+    }
 
     //need this to behave slightly differently than standard grid setup? Unsure whether to put here or in _grid. 
     .h-nav {
         align-items: center;
-        width: 10%;
-    }
-
-    .h-col {
-        margin: 15px; 
-        align-items: center; 
-    }
-
-    //Just to get everything lined up correctly. Definitely gross. 
-    .h-space {
-        width: 30%;
+        margin-left: 20px;
     }
 
     a {
         color: $md-grey;
-        min-height: 70px;
+    }
+
+    nav {
+        font: $sans-serif;
+        font-weight: bold;
+        width: 70%;
+        min-height: 100%;
+        ul {
+            display: flex;
+            list-style-type: none;
+            text-transform: uppercase;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            li {
+               margin: 10px;
+               padding: 10px; 
+                a {
+                    color: $white; 
+                    &:hover {
+                        color: $md-grey;
+                    }
+                }
+            }
+        }
     }
    
     //Extra small screesn 
     @media (max-width: $screen-sm) {
-
+        
     }
     //Small Screens
     @media (min-width: $screen-sm) {
         height: 100px;
-        .h-space{
-            width: 50%;
-        }
     }
     //Tablet/low res laptop
     @media (min-width: $screen-md) {
-        height: 197px;
-        background-image: url("./../assets/images/medium-header.png");
+        height: 150px;
+        .logo {
+            margin-left: 20px;
+            margin-right: 20px;
+        }
     }
     //Desktop
     @media (min-width: $screen-lg) {
         height: 123px;
-        background-image: url("./../assets/images/desktop-header.png");
+
     }
 }

@@ -3,15 +3,16 @@
 
 //All styles 
 * {
-  font-family: 'Cambria', Georgia, Garamond, serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; 
   box-sizing: border-box;
   margin: 0px;  
   padding: 0px; //necessary? 
+
 }
 
 body {
+    font-family: $serif;
     //Extra small screesn 
     @media (max-width: $screen-sm) {
     }
@@ -59,6 +60,11 @@ a {
     border-radius: 25px;
     padding: 5px; 
     display: inline-block;
+
+    &:hover{
+        background-color: $bg-blue; 
+        color: $white; 
+    } 
 }
 
 .hide-xs {
@@ -71,12 +77,20 @@ a {
     @media (min-width: $screen-sm) {
         display: none;
     }
-    display: flex;
 }
 
 .show-sm {
     @media (min-width: $screen-md) {
         display: none; 
-    }
-    display: flex; 
+    } 
+}
+
+.hover-on {
+    transition: ease-out 0.3s;
+    -webkit-transition: ease-out 0.3s;
+}
+
+.hover-off {
+    transition: ease-in 0.3s;
+    -webkit-transition: ease-out 0.3s; 
 }
