@@ -1,17 +1,17 @@
 
 import Vue from "vue";
 
-var Example = {
-    name: "Example",
+var ShadedSection = {
+    name: "ShadedSection",
 
-    data: function assignData() {
+    data() {
         return {};
     },
 
-    mounted: function onMounted() {}
+    mounted() {}
 };
 
-export default Vue.extend(Example);
+export default Vue.extend(ShadedSection);
 
 /**
  * General methods

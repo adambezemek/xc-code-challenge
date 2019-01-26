@@ -1,17 +1,40 @@
 
 import Vue from "vue";
+import { mapActions, mapState } from "vuex";
 
-var Example = {
-    name: "Example",
+var FeatureImages = {
+  name: "FeatureImages",
 
-    data: function assignData() {
-        return {};
-    },
+  computed: {
+    ...mapState({
+      featureImages(state) {
+        return state.featureImages.all;
+      }
+    })
+  },
 
-    mounted: function onMounted() {}
+  data() {
+    return {};
+  },
+
+  methods: {
+    ...mapActions({
+      collectFeatureImages: 'featureImages/collect'
+    }),
+
+    init() {
+      this.collectFeatureImages();
+    }
+  },
+
+  mounted() {
+    this.init();
+
+    console.info('FeatureImages mounted', this);
+  }
 };
 
-export default Vue.extend(Example);
+export default Vue.extend(FeatureImages);
 
 /**
  * General methods

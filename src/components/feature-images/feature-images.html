@@ -1,4 +1,27 @@
 
-<div class="xc-feature-images">
-  Feature Images
+<div class="xc-feat-imgs">
+
+  <div class="xc-feat-img"
+    :key="'feat-img-' + index"
+    v-for="(featImg, index) in featureImages">
+
+    <img class="xc-feat-img__img"
+      :alt="featImg.image.alt"
+      :src="featImg.imgSrc" />
+
+    <h3>{{ featImg.title }}</h3>
+
+    <div class="xc-feat-img__text"
+      v-html="featImg.text">
+    </div>
+
+    <a class="xc-feat-img__action"
+      :href="featImg.cta.url"
+      :target="featImg.cta.target"
+      v-if="featImg.cta" >
+      {{ featImg.cta.text }}
+    </a>
+
+  </div>
+
 </div>

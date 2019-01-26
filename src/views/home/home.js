@@ -12,13 +12,13 @@ var homeView = {
         'shaded-section': ShadedSection
     },
 
-    data: function assignData() {
+    data() {
         return {};
     },
 
     methods: {},
 
-    mounted: function onMounted() {
+    mounted() {
         console.info("HomeView mounted", this);
     }
 };

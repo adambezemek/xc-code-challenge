@@ -1,0 +1,109 @@
+
+@import "../../scss/mixin/sizing";
+
+@import "../../scss/var/animation";
+@import "../../scss/var/breakpoints";
+@import "../../scss/var/colors";
+
+.xc-feat-imgs {
+  align-items: flex-start;
+  color: $color__blue;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  overflow: hidden;
+  padding: 1em;
+  padding-right: 0;
+  max-width: 100%;
+}
+
+@media (min-width: $bp__sm) {
+  .xc-feat-imgs {
+    flex-wrap: nowrap;
+    padding-top: 6em;
+    padding-bottom: 6em;
+  }
+}
+
+@media (min-width: $bp__md) {
+  .xc-feat-imgs {
+    padding-right: 6em;
+    padding-left: 6em;
+  }
+}
+
+/**
+ * Feature Image
+ */
+
+.xc-feat-img {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+  width: 100%;
+}
+
+.xc-feat-img__action {
+  @include size(auto, 3em);
+  align-items: center;
+  background-color: $color__white;
+  border: 2px solid $color__blue;
+  border-radius: 1.5em;
+  color: $color__blue;
+  display: flex;
+  padding: 0 1em;
+  text-decoration: none;
+  transition: all $ani__dur ease-in-out;
+
+  &:hover {
+    background-color: $color__blue--dark;
+    color: $color__white;
+  }
+}
+
+.xc-feat-img__img {
+  margin-bottom: 1em;
+  pointer-events: none;
+  width: 100%;
+  max-width: 100%;
+}
+
+.xc-feat-img__text {
+  line-height: 1.5em;
+}
+
+@media (min-width: $bp__sm) {
+  .xc-feat-img {
+    margin: 0.5em;
+    width: calc(100% / 3);
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .xc-feat-img__action {
+    @include size(auto, 2em);
+    border-radius: 1em;
+  }
+
+  .xc-feat-img__img {
+    cursor: grab;
+    pointer-events: all;
+
+    &:active {
+      cursor: grabbing;
+    }
+  }
+}
+
+@media (min-width: $bp__md) {
+  .xc-feat-img {
+    margin: 0.5em;
+  }
+}

@@ -1,8 +1,12 @@
 import Vue from "vue";
 import Vuex from "vuex";
 
+import FeatureImagesStore from './feature-images.store';
+
 var actions = _buildActions();
-var modules = {};
+var modules = {
+  featureImages: FeatureImagesStore
+};
 var mutations = _buildMutations();
 var state = {};
 
