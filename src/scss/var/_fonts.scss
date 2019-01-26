@@ -1,7 +1,8 @@
 
 @import './dimensions';
 
-$font__family: 'Yanone Kaffeesatz', Helvetica, Arial, serif;
+$font__family: 'Open Sans', Helvetica, Arial, serif;
+$font__family--header: 'Roboto Slab', Helvetica, Arial, serif;
 
 $font__size: calc(10px + (#{$app__min} * .01));
 

@@ -1,0 +1,11 @@
+
+@import "../../scss/mixin/sizing";
+
+@import "../../scss/var/colors";
+@import "../../scss/var/dimensions";
+
+.xc-shaded-section {
+  @include size($sha-sec__width, $sha-sec__height);
+  background-color: $color__blue--darker;
+  background-image: linear-gradient(to bottom right, $color__blue--dark, $color__blue--darker);
+}

@@ -1,3 +1,8 @@
+
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i");
+
+@import url("https://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700");
+
 @import '../../scss/reset';
 
 @import '../../scss/mixin/sizing';
@@ -6,46 +11,44 @@
 @import '../../scss/var/dimensions';
 @import '../../scss/var/fonts';
 
-/**
- * Home baseline
- */
+.xc-home {
 
-body {
-  background-color: $color__white;
-}
-
-* {
-  font-family: $font__family;
-  font-size: $font__size;
-}
-
-a {
-  color: $color__link;
-
-  &:hover {
-    color: $color__link--hover;
-    text-decoration: none;
+  * {
+    font-family: $font__family;
+    font-size: $font__size;
   }
-}
 
-blockquote {
-  font-size: $font__size--blockquote;
-}
+  a {
+    color: $color__link;
 
-h1 {
-  font-size: $font__size--h1;
-}
+    &:hover {
+      color: $color__link--hover;
+      text-decoration: none;
+    }
+  }
 
-h2 {
-  font-size: $font__size--h2;
-}
+  blockquote {
+    font-size: $font__size--blockquote;
+  }
 
-h3 {
-  font-size: $font__size--h3;
-}
+  h1, h2, h3, h4 {
+    font-family: $font__family--header;
+  }
 
-h4 {
-  font-size: $font__size--h4;
-}
+  h1 {
+    font-size: $font__size--h1;
+  }
 
-.xc-home {}
+  h2 {
+    font-size: $font__size--h2;
+  }
+
+  h3 {
+    font-size: $font__size--h3;
+  }
+
+  h4 {
+    font-size: $font__size--h4;
+  }
+
+}
