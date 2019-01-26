@@ -1,8 +1,36 @@
 # xc-code-challenge
 
+## Project setup
+```
+npm install
+```
+
+### Compiles and hot-reloads for development
+```
+npm run serve
+```
+
+### Compiles and minifies for production
+```
+npm run build
+```
+
+### Run your tests
+```
+npm run test
+```
+
+### Lints and fixes files
+```
+npm run lint
+```
+
+### Customize configuration
+See [Configuration Reference](https://cli.vuejs.org/config/).
+
 ## Description
 
-Using the files in the `/designs` folder of this repo, recreate the webpage to support responsive design for desktop, tablet, and mobile.  
+Using the files in the `/designs` folder of this repo, recreate the webpage to support responsive design for desktop, tablet, and mobile.
 
 While there should be HTML structure to represent the shaded area, only do the minimum amount of work necessary in the shaded section to support the section that isn’t shaded (aka: don’t build the carousel).  Focus on the non-shaded section of the flats **(the three-item content grid)**.
 
@@ -16,7 +44,7 @@ A basic build system should be used that contains two tasks. The first task shou
 - Semantic HTML
 - WCAG Accessible (as much as possible, don’t spend too much time)
 - No CSS framework should be used
-- ES6+ JavaScript (frameworks are ok to use) 
+- ES6+ JavaScript (frameworks are ok to use)
 - SASS (or other CSS preprocessors)
 - Responsive
 - Build Process (Gulp, Grunt, Webpack, etc)
