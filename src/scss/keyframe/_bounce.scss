@@ -1,0 +1,18 @@
+
+@keyframes bounce {
+  0% {
+    transform: scaleX(1) scaleY(1) translateY(0);
+  }
+  10% {
+    transform: scaleX(1.1) scaleY(0.5) translateY(0);
+  }
+  20% {
+    transform: scaleX(0.8) scaleY(1.2) translateY(-20%);
+  }
+  40% {
+    transform: scaleX(1.2) scaleY(0.5) translateY(5%);
+  }
+  46% {
+    transform: scaleX(1) scaleY(1) translateY(0);
+  }
+}

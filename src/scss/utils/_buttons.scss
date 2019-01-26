@@ -1,0 +1,41 @@
+
+@import '../var/animation';
+@import '../var/mixin';
+
+.beek-close-button {
+  @include size(3em, 3em);
+  align-items: center;
+  animation: pulse-background--rose $ani__dur--slower infinite;
+  animation-delay: $ani__dur--slow;
+  background-color: $color__rose--darkest;
+  border-radius: 50%;
+  color: $color__rose;
+  cursor: pointer;
+  display: flex;
+  font-family: 'Press Start 2P', 'VT323', 'PT Sans', Helvetica, Arial, sans-serif;
+  justify-content: center;
+  position: absolute;
+  top: 0.5em; right: 0.5em;
+  z-index: 3;
+
+  &:hover {
+    animation: none;
+    background-color: $color__white;
+
+    &::before {
+      text-shadow: 0.0375em 0.0375em 0 $color__rose;
+    }
+  }
+
+  &::before {
+    content: 'X';
+    display: block;
+    font-size: 1.5em;
+    text-shadow: 0.0375em 0.0375em 0 $color__rose--lightest;
+    transform: translateX(0.075em);
+  }
+}
+
+@media (min-width: $bp__md) {
+  top: 1em; right: 2em;
+}

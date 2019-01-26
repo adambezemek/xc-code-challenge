@@ -1,0 +1,8 @@
+
+@import '../keyframe/bounce';
+@import '../keyframe/crt';
+@import '../keyframe/pulse';
+
+$ani__dur: 0.2s;
+$ani__dur--slow: calc(#{$ani__dur} * 10);
+$ani__dur--slower: calc(#{$ani__dur} * 20);

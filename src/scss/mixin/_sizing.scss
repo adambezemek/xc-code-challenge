@@ -1,0 +1,10 @@
+
+@mixin size($width, $height) {
+  height:  $height;
+  width:  $width;
+}
+
+@mixin square($size) {
+  height:  $size;
+  width:  $size;
+}

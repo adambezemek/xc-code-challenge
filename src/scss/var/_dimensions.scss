@@ -1,0 +1,21 @@
+
+@import './breakpoints';
+
+$app__width: 100vw;
+$app__height: 100vh;
+
+$app__min: 100vmin;
+
+$app__margin: $app__min / 9;
+
+/**
+ * Title Card
+ */
+
+$card__width: 98vw;
+$card__height: 98vh;
+
+$card__width--small: $app__min * 0.98;
+$card__height--small: $card__width--small * (4/5);
+
+$card__margin: $app__margin / 4;

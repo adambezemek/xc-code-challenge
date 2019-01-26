@@ -1,0 +1,56 @@
+
+// @import './colors.json';
+
+$color__black: #121111;
+$color__white: #fcffff;
+
+$color__gray--light: #dcdddd;
+$color__gray: #c3c4c4;
+$color__gray--dark: #575555;
+$color__gray--darker: #323333;
+$color__gray--darkest: #121111;
+
+$color__red--lighter: #FF888D;
+$color__red--light: #F14950;
+$color__red: #FF190D;
+$color__red--dark: #c51104;
+$color__red--darker: #A00309;
+
+// $color__rose--lightest: #FFA1D9;
+// $color__rose--lighter: #FF8AD0;
+$color__rose--light: #ff4c78;
+$color__rose: #f73162;
+$color__rose--dark: #aa1137;
+// $color__rose--darker: #9F005F;
+// $color__rose--darkest: #520031;
+
+$color__orange--light: #fc9a46;
+$color__orange: #fa6824;
+$color__orange--dark: #bb4a19;
+
+$color__yellow: #ffeb3b;
+$color__yellow--dark: #d1ba01;
+
+$color__green--light: #b3e067;
+$color__green: #80cc02;
+$color__green--dark: #508101;
+
+$color__blue--lightest: #76b8f7;
+$color__blue--lighter: #76afe4;
+$color__blue--light: #6294c4;
+$color__blue: #1d5891;
+$color__blue--dark: #38526a;
+$color__blue--darker: #11406b;
+$color__blue--darkest: #082e52;
+
+$color__violet: #B406FF;
+$color__violet--dark: #7D02B2;
+$color__violet--darker: #470165;
+$color__violet--darkest: #130032;
+
+/**
+ * Context specific
+ */
+
+$color__link: $color__orange;
+$color__link--hover: $color__orange--light;

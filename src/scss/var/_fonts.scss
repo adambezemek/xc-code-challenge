@@ -1,0 +1,13 @@
+
+@import './dimensions';
+
+$font__family: 'Yanone Kaffeesatz', Helvetica, Arial, serif;
+
+$font__size: calc(10px + (#{$app__min} * .01));
+
+$font__size--h1: calc(#{$font__size} * 2.5);
+$font__size--h2: calc(#{$font__size} * 2);
+$font__size--h3: calc(#{$font__size} * 1.7);
+$font__size--h4: calc(#{$font__size} * 1.4);
+
+$font__size--blockquote: calc(#{$font__size} * 1.5);

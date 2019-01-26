@@ -1,0 +1,51 @@
+@import '../../scss/reset';
+
+@import '../../scss/mixin/sizing';
+
+@import '../../scss/var/colors';
+@import '../../scss/var/dimensions';
+@import '../../scss/var/fonts';
+
+/**
+ * Home baseline
+ */
+
+body {
+  background-color: $color__white;
+}
+
+* {
+  font-family: $font__family;
+  font-size: $font__size;
+}
+
+a {
+  color: $color__link;
+
+  &:hover {
+    color: $color__link--hover;
+    text-decoration: none;
+  }
+}
+
+blockquote {
+  font-size: $font__size--blockquote;
+}
+
+h1 {
+  font-size: $font__size--h1;
+}
+
+h2 {
+  font-size: $font__size--h2;
+}
+
+h3 {
+  font-size: $font__size--h3;
+}
+
+h4 {
+  font-size: $font__size--h4;
+}
+
+.xc-home {}
