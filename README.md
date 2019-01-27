@@ -68,5 +68,5 @@ Feature and Image data is called separately and then, because of the divisive na
 
 ## Project board - To do
 
-1. Add <transition-group> to improve vuedraggable movements
-2. Build a relational system for Feature Images (instead of relying on array order)
+1. Add `<transition-group>` to improve vuedraggable movements
+2. Build a relational system for Feature Images (use ID's instead of relying on array order)
