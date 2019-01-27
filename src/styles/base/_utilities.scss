@@ -1,0 +1,28 @@
+// Site wide utility styles
+
+// Container
+.xc-u-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+// Visually hide element but still safe for screen readers
+@mixin visually-hidden {
+  /* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */
+  position: absolute;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  // clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
+// Remove visually hidden element
+@mixin remove-hidden {
+  position: initial;
+  height: initial;
+  width: initial;
+  overflow: initial;
+  clip: initial;
+}
+
+
