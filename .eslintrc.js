@@ -1,68 +1,79 @@
-
 module.exports = {
+  root: true,
 
-    root: true,
+  env: {
+    node: true
+  },
 
-    env: {
-        node: true
-    },
+  extends: [
+    'plugin:vue/strongly-recommended'
+  ],
 
-    extends: [
-        'plugin:vue/strongly-recommended'
+  globals: {},
+
+  parserOptions: {
+    ecmaVersion: 2017,
+    parser: 'babel-eslint',
+    sourceType: 'module'
+  },
+
+  rules: {
+    'vue/html-closing-bracket-newline': 'off',
+    'vue/html-closing-bracket-spacing': 'off',
+    'vue/html-indent': [
+      'off',
+      4
     ],
+    'vue/max-attributes-per-line': 'off',
+    'vue/mustache-interpolation-spacing': 'warn',
+    'vue/order-in-components': [
+      'warn',
+      {
+        order: [
+          'name',
+          'beforeCreate',
+          'beforeDestroy',
+          'beforeMount',
+          'beforeUpdate',
+          'comments',
+          'components',
+          'computed',
+          'created',
+          'data',
+          'delimiters',
+          'destroyed',
+          'directives',
+          'el',
+          'extends',
+          'filters',
+          'functional',
+          'inheritAttrs',
+          'LIFECYCLE_HOOKS',
+          'methods',
+          'mixins',
+          'model',
+          'mounted',
+          'parent',
+          'props',
+          'propsData',
+          'render',
+          'renderError',
+          'template',
+          'updated',
+          'watch'
+        ]
+      }
+    ],
+    'vue/html-self-closing': 'off',
 
-    globals: {},
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'semi': 'off'
+  },
 
-    parserOptions: {
-        ecmaVersion: 2017,
-        parser: 'babel-eslint',
-        sourceType: 'module'
-    },
-
-    rules: {
-        'vue/html-closing-bracket-newline': 'off',
-        'vue/html-closing-bracket-spacing': 'off',
-        'vue/html-indent': [
-            'off', 4
-        ],
-        'vue/max-attributes-per-line': 'off',
-        'vue/mustache-interpolation-spacing': 'warn',
-        'vue/order-in-components': ['warn', {
-            'order': [
-                'name',
-                'beforeCreate',
-                'beforeDestroy',
-                'beforeMount',
-                'beforeUpdate',
-                'comments',
-                'components',
-                'computed',
-                'created',
-                'data',
-                'delimiters',
-                'destroyed',
-                'directives',
-                'el',
-                'extends',
-                'filters',
-                'functional',
-                'inheritAttrs',
-                'LIFECYCLE_HOOKS',
-                'methods',
-                'mixins',
-                'model',
-                'mounted',
-                'parent',
-                'props',
-                'propsData',
-                'render',
-                'renderError',
-                'template',
-                'updated',
-                'watch'
-            ]
-        }],
-
-        'vue/html-self-closing': 'off'
-    }
-};
+  'extends': [
+    'plugin:vue/strongly-recommended',
+    'plugin:vue/essential',
+    '@vue/standard'
+  ]
+}

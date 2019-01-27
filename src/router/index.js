@@ -1,22 +1,22 @@
-import Vue from "vue";
-import Router from "vue-router";
+import Vue from 'vue'
+import Router from 'vue-router'
 
-import Home from "@/views/home/Home.vue";
+import Home from '@/views/home/Home.vue'
 
-Vue.use(Router);
+Vue.use(Router)
 
-let redirectRoute = {
-  // 404 Redirect
-  path: "*",
-  redirect: "/"
-};
+// let redirectRoute = {
+//   // 404 Redirect
+//   path: '*',
+//   redirect: '/'
+// }
 
 let homeRoute = {
   component: Home,
-  name: "home",
-  path: "/"
-};
+  name: 'home',
+  path: '/'
+}
 
 export default new Router({
   routes: [homeRoute]
-});
+})

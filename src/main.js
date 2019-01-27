@@ -1,17 +1,15 @@
-import Vue from "vue";
+import Vue from 'vue'
 
-import Router from "./router";
-import Store from "./store";
+import Router from './router'
+import Store from './store'
 
-var apps = document.querySelectorAll(".xc");
+var apps = document.querySelectorAll('.xc')
 
-apps.forEach(initApp);
+apps.forEach(function initApp (appNode) {
+  return new Vue({
+    el: appNode,
 
-function initApp(appNode) {
-    new Vue({
-        el: appNode,
-
-        router: Router,
-        store: Store
-    });
-}
+    router: Router,
+    store: Store
+  });
+});

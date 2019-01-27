@@ -4,6 +4,7 @@
 @import "../../scss/var/animation";
 @import "../../scss/var/breakpoints";
 @import "../../scss/var/colors";
+@import "../../scss/var/dimensions";
 
 .xc-feat-imgs {
   align-items: flex-start;
@@ -17,34 +18,7 @@
   max-width: 100%;
 }
 
-@media (min-width: $bp__sm) {
-  .xc-feat-imgs {
-    flex-wrap: nowrap;
-    padding-top: 6em;
-    padding-bottom: 6em;
-  }
-}
-
-@media (min-width: $bp__md) {
-  .xc-feat-imgs {
-    padding-right: 6em;
-    padding-left: 6em;
-  }
-}
-
-/**
- * Feature Image
- */
-
-.xc-feat-img {
-  align-items: flex-start;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 2em;
-  width: 100%;
-}
-
-.xc-feat-img__action {
+.xc-feat-imgs__action {
   @include size(auto, 3em);
   align-items: center;
   background-color: $color__white;
@@ -57,53 +31,74 @@
   transition: all $ani__dur ease-in-out;
 
   &:hover {
-    background-color: $color__blue--dark;
+    background-color: $color__blue;
     color: $color__white;
   }
 }
 
-.xc-feat-img__img {
-  margin-bottom: 1em;
-  pointer-events: none;
+.xc-feat-imgs__col {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  width: 100%;
+}
+
+.xc-feat-imgs__col--feature {
+  margin-bottom: 2em;
+
+  .xc-feat-imgs__img {
+    margin-bottom: 1em;
+  }
+}
+
+.xc-feat-imgs__img {
   width: 100%;
   max-width: 100%;
 }
 
-.xc-feat-img__text {
-  line-height: 1.5em;
+.xc-feat-imgs__row {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.xc-feat-imgs__row--images {
+  display: none;
 }
 
 @media (min-width: $bp__sm) {
-  .xc-feat-img {
-    margin: 0.5em;
-    width: calc(100% / 3);
-
-    &:first-child {
-      margin-left: 0;
-    }
-
-    &:last-child {
-      margin-right: 0;
-    }
+  .xc-feat-imgs {
+    padding-top: 6em;
+    padding-bottom: 6em;
   }
 
-  .xc-feat-img__action {
+  .xc-feat-imgs__action {
     @include size(auto, 2em);
     border-radius: 1em;
   }
 
-  .xc-feat-img__img {
-    cursor: grab;
-    pointer-events: all;
+  .xc-feat-imgs__col {
+    padding: 0 0.5em;
+    width: $feat-imgs__col;
+  }
 
-    &:active {
-      cursor: grabbing;
+  .xc-feat-imgs__row--features {
+    .xc-feat-imgs__img {
+      display: none;
     }
+  }
+
+  .xc-feat-imgs__row--images {
+    display: flex;
   }
 }
 
 @media (min-width: $bp__md) {
-  .xc-feat-img {
-    margin: 0.5em;
+  .xc-feat-imgs {
+    padding-right: 6em;
+    padding-left: 6em;
   }
 }

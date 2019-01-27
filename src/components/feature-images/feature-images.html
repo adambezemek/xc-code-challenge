@@ -1,27 +1,82 @@
 
 <div class="xc-feat-imgs">
 
-  <div class="xc-feat-img"
-    :key="'feat-img-' + index"
-    v-for="(featImg, index) in featureImages">
+  <draggable class="xc-feat-imgs__row xc-feat-imgs__row--images"
+    :options="dragOptions"
+    v-model="sortedImages"
+    @change="resetFeatureImages" >
 
-    <img class="xc-feat-img__img"
-      :alt="featImg.image.alt"
-      :src="featImg.imgSrc" />
+    <div class="xc-feat-imgs__col xc-feat-imgs__col--image"
+      :key="'feature-img-' + index"
+      v-for="(img, index) in sortedImages" >
 
-    <h3>{{ featImg.title }}</h3>
+      <img class="xc-feat-imgs__img"
+        alt="img.alt"
+        :src="img.src" />
 
-    <div class="xc-feat-img__text"
-      v-html="featImg.text">
     </div>
 
-    <a class="xc-feat-img__action"
-      :href="featImg.cta.url"
-      :target="featImg.cta.target"
-      v-if="featImg.cta" >
-      {{ featImg.cta.text }}
-    </a>
+  </draggable>
+
+  <div class="xc-feat-imgs__row xc-feat-imgs__row--features"
+    slot="footer">
+
+    <div class="xc-feat-imgs__col xc-feat-imgs__col--feature"
+      :key="'feature-' + index"
+      v-for="(feature, index) in features" >
+
+      <img class="xc-feat-imgs__img"
+        alt="feature.image.alt"
+        :src="feature.image.src"
+        v-if="feature.image.id" />
+
+      <h3>{{ feature.title }}</h3>
+
+      <div class="xc-feat-imgs__text"
+        v-html="feature.text">
+      </div>
+
+      <a class="xc-feat-imgs__action"
+        tabindex="index"
+        :href="feature.cta.url"
+        :target="feature.cta.target"
+        v-if="feature.cta" >
+        {{ feature.cta.text }}
+      </a>
+
+    </div>
 
   </div>
 
 </div>
+
+
+
+
+
+<!-- <feature
+  :feature="feature"
+  :index="index"
+  :key="'feature-' + index"
+  v-for="(feature, index) in features" >
+</feature> -->
+
+
+<!-- <div class="xc-feat-imgs">
+
+  <draggable
+    :options="dragOptions"
+    v-model="features"
+    @end="drag=false"
+    @start="drag=true" >
+
+    <feature
+      :feature="feature"
+      :index="index"
+      :key="'feature-' + index"
+      v-for="(feature, index) in features" >
+    </feature>
+
+  </draggable>
+
+</div> -->

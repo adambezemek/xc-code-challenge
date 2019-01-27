@@ -1,6 +1,4 @@
 
-@import './breakpoints';
-
 $app__width: 100vw;
 $app__height: 100vh;
 
@@ -9,7 +7,13 @@ $app__min: 100vmin;
 $app__margin: $app__min / 9;
 
 /**
- * Shaded Section - sha-sec
+ * FeatureImages - feat-imgs
+ */
+
+$feat-imgs__col: calc(100% / 3);
+
+/**
+ * ShadedSection - sha-sec
  */
 
  $sha-sec__width: $app__width;
