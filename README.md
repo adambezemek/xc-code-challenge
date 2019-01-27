@@ -22,12 +22,6 @@ npm run serve
 
 # Compiles and minifies for production
 npm run build
-
-# Run your tests
-npm run test
-
-# Lints and fixes files
-npm run lint
 ```
 
 A static build for this project is available for browser preview using `dist/index.html`. This preview method can happen without running a server.
