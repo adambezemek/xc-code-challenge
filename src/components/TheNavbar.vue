@@ -9,7 +9,13 @@
         menu
       </i>
     </a>
-    <img class="xc-navbar__logo" alt="Habitat logo" src="../assets/logo.png" />
+    <a href="#" aria-label="Index Page Link">
+      <img
+        class="xc-navbar__logo"
+        alt="Habitat logo"
+        src="../assets/logo.png"
+      />
+    </a>
     <nav class="xc-navbar-nav">
       <ul class="xc-navbar__nav-list xc-navbar__nav-list--main">
         <li class="xc-navbar__nav-item">
@@ -41,7 +47,7 @@
           >
         </li>
         <li class="xc-navbar__nav-item">
-          <a href="#" class="xc-navbar__nav-link" aria-label="Search LInk"
+          <a href="#" class="xc-navbar__nav-link" aria-label="Search Link"
             ><i class="material-icons" aria-hidden="true">
               search
             </i></a
@@ -83,7 +89,6 @@ export default {};
 
     .xc-navbar__nav-list {
       list-style-type: none;
-      padding-left: 0;
 
       .xc-navbar__nav-item {
         display: inline-block;
@@ -108,6 +113,10 @@ export default {};
             @include remove-hidden;
           }
         }
+      }
+
+      .xc-navbar__nav-item:last-of-type {
+        margin-right: 0;
       }
     }
 
