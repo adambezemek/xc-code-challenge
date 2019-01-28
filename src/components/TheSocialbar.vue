@@ -1,12 +1,12 @@
 <template>
   <div class="xc-socialbar xc-u-container">
     <ul class="xc-socialbar__list">
-      <li class="xc-socialbar__item">
+      <li class="xc-socialbar__item xc-socialbar__item--facebook">
         <a href="#" class="xc-socialbar__item-link" aria-label="Facebook Link">
           <i class="material-icons" aria-hidden="true">local_parking</i>
         </a>
       </li>
-      <li class="xc-socialbar__item">
+      <li class="xc-socialbar__item xc-socialbar__item--twitter">
         <a href="#" class="xc-socialbar__item-link" aria-label="Twitter Link">
           <i class="material-icons" aria-hidden="true">airplanemode_active</i>
         </a>
@@ -51,10 +51,15 @@ export default {};
 
     .xc-socialbar__item {
       display: inline-block;
-      margin-right: 40px;
 
       .material-icons {
         margin-bottom: -50px;
+        font-size: 18px;
+      }
+
+      &.xc-socialbar__item--facebook,
+      &.xc-socialbar__item--twitter {
+        margin-right: 45px;
       }
 
       &.xc-socialbar__item--youtube {
@@ -68,6 +73,7 @@ export default {};
 
     .xc-socialbar__item--helix {
       margin-right: 20px;
+      margin-left: 40px;
     }
 
     .xc-socialbar__item:last-of-type {
