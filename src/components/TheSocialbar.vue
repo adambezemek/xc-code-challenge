@@ -30,12 +30,15 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "TheSocialbar"
+};
 </script>
 
 <style scoped lang="scss">
 .xc-socialbar {
   width: 100%;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
 
   .xc-socialbar__list {
     @include visually-hidden;
@@ -54,7 +57,7 @@ export default {};
 
       .material-icons {
         margin-bottom: -50px;
-        font-size: 18px;
+        font-size: 1.125rem;
       }
 
       &.xc-socialbar__item--facebook,
