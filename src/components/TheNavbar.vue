@@ -10,11 +10,7 @@
       </i>
     </a>
     <a href="#" aria-label="Index Page Link">
-      <img
-        class="xc-navbar__logo"
-        alt="Habitat logo"
-        src="../assets/logo.png"
-      />
+      <img class="xc-navbar__logo" alt="Habitat logo" src="@/assets/logo.png" />
     </a>
     <nav class="xc-navbar-nav">
       <ul class="xc-navbar__nav-list xc-navbar__nav-list--main">
@@ -88,8 +84,6 @@ export default {};
     }
 
     .xc-navbar__nav-list {
-      list-style-type: none;
-
       .xc-navbar__nav-item {
         display: inline-block;
         margin-right: 20px;
