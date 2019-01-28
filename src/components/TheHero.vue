@@ -56,7 +56,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "TheHero"
+};
 </script>
 
 <style scoped lang="scss">
@@ -75,13 +77,13 @@ export default {};
         display: inline-block;
         color: $slide-indicators;
         cursor: pointer;
-        margin-right: 5px;
+        margin-right: 0.3125rem;
 
         .material-icons {
-          font-size: 14px;
+          font-size: 0.875rem;
 
           @media screen and (min-width: $md) {
-            font-size: 18px;
+            font-size: 1.125rem;
           }
         }
       }
@@ -158,13 +160,13 @@ export default {};
       }
 
       .material-icons {
-        font-size: 44px;
+        font-size: 2.75rem;
 
         @media screen and (min-width: $md) {
-          font-size: 64px;
+          font-size: 4rem;
         }
         @media screen and (min-width: $lg) {
-          font-size: 84px;
+          font-size: 5.25rem;
         }
       }
     }
