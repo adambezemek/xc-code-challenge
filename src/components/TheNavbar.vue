@@ -55,7 +55,9 @@
 </template>
 
 <script>
-export default {};
+export default {
+  name: "TheNavbar"
+};
 </script>
 
 <style scoped lang="scss">
@@ -63,6 +65,7 @@ export default {};
   display: flex;
   align-items: center;
   width: 100%;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
 
   .xc-navbar__menu-toggle {
     color: $header-color;
