@@ -23,6 +23,8 @@ export default {
   border: none;
   display: inline-block;
   cursor: pointer;
+  font-family: serif;
+  font-weight: 700;
 
   &.xc-button__pill {
     border: 2px solid $footer-color;
@@ -31,9 +33,7 @@ export default {
     padding: 0 15px;
     line-height: 32px;
     height: auto;
-    font-weight: 700;
     border-radius: 18px;
-
 
     &.xc-button__pill--purple {
       color: $main-color;
@@ -49,8 +49,7 @@ export default {
     color: $footer-color;
     border-radius: $big-radius;
     font-size: 1.2rem;
-    font-family: serif;
-    font-weight: 700;
+
     padding: 12px 12px;
   }
 }
