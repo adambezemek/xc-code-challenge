@@ -2,6 +2,7 @@
   <div id="app">
     <TheHeader />
     <TheHero />
+    <AppMain />
     <TheFooter />
   </div>
 </template>
@@ -9,6 +10,7 @@
 <script>
 import TheHeader from "./components/TheHeader.vue";
 import TheHero from "./components/TheHero.vue";
+import AppMain from "./components/AppMain.vue";
 import TheFooter from "./components/TheFooter.vue";
 
 export default {
@@ -16,6 +18,7 @@ export default {
   components: {
     TheHeader,
     TheHero,
+    AppMain,
     TheFooter
   }
 };
