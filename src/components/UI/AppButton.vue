@@ -27,7 +27,7 @@ export default {
   font-weight: 700;
 
   &.xc-button__pill {
-    border: 2px solid $footer-color;
+    border: 2px solid;
     background-color: transparent;
     font-size: 0.8rem;
     padding: 0 15px;
@@ -37,10 +37,12 @@ export default {
 
     &.xc-button__pill--purple {
       color: $main-color;
+      border-color: $main-color;
     }
 
     &.xc-button__pill--gray {
       color: $footer-color;
+      border-color: $footer-color;
     }
   }
 
