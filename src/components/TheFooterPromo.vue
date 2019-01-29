@@ -56,6 +56,7 @@ export default {
   justify-content: center;
   align-items: flex-start;
   margin: 0 auto;
+  padding-top: 66px;
 
   @media screen and (min-width: $lg) {
     max-width: 85%;

@@ -21,11 +21,5 @@ export default {
 <style scoped lang="scss">
 .xc-footer {
   background-color: #3b505b;
-  padding: 110px 16px 40px;
-
-  @media screen and (min-width: $md) {
-    padding-left: 26px;
-    padding-right: 26px;
-  }
 }
 </style>
