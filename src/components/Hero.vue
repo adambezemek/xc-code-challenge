@@ -1,5 +1,6 @@
 <template>
-    <div class="hero-shot"></div>
+    <!-- Is 'figure' really right here? Unsure --> 
+    <figure class="hero-shot"></figure>
 </template>
 
 <script>

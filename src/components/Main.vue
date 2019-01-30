@@ -1,5 +1,6 @@
 <template>
-    <div class="main">
+    <main class="main">
+        <Hero></Hero>
         <Draggable :imgurls="imgurls" @orderUpdated="updateImgurls"></Draggable>
         <div class="grid">
             <div class="col">
@@ -46,12 +47,15 @@
                 </div>
             </div>
         </div>
-    </div>
+        <Download></Download>
+    </main>
     
 </template>
 
 <script>
+import Hero from './Hero.vue'
 import Draggable from './Draggable.vue'
+import Download from './Download.vue'
 
 import img1 from "../assets/images/cta1.png"
 import img2 from "../assets/images/cta2.png"
@@ -92,7 +96,9 @@ export default {
         }
   },
   components: {
-      Draggable 
+      Hero,
+      Draggable,
+      Download 
   }
 }
 </script>

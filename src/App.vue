@@ -1,9 +1,7 @@
 <template>
   <div id="app">
     <Header></Header>
-    <Hero></Hero>
     <Main></Main>
-    <Download></Download>
     <Footer></Footer>
   </div>
 </template>
