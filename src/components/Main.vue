@@ -84,16 +84,15 @@ export default {
                   url: img3,
                   title: 'Cashier',
                   altText: 'Woman in striped apron accepting a credit card for payment.' 
-              }
+              },
           ],
       }
   },
   methods: {
       //watching for updated child array. Handle it and display update 
         updateImgurls(updatedList) {
-            this.imgurls = updatedList;
-            
-        }
+            this.imgurls = updatedList;  
+        },
   },
   components: {
       Hero,
