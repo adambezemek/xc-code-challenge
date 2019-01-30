@@ -33,6 +33,7 @@ export default {
 
 body {
   margin: 0;
+  font-family: serif;
 }
 
 a {
@@ -43,9 +44,5 @@ ul,
 ol {
   padding-left: 0;
   list-style-type: none;
-}
-
-#app {
-  font-family: serif;
 }
 </style>

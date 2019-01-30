@@ -2,11 +2,10 @@
   <main class="xc-main xc-u-container">
     <div class="xc-main__article-card">
       <div
-        @drop="drop"
+        @drop.stop="drop"
         @dragenter.prevent="dragenter"
-        @dragover.prevent.stop="dragover"
+        @dragover.prevent="dragover"
         @dragleave="dragleave"
-        droppable="true"
       >
         <img
           src="@/assets/man_at_computer.png"
@@ -32,11 +31,10 @@
     </div>
     <div class="xc-main__article-card">
       <div
-        @drop="drop"
-        @dragenter.prevent="dragenter"
-        @dragover.prevent.stop="dragover"
+        @drop.stop="drop"
+        @dragenter.prevent.stop="dragenter"
+        @dragover.prevent="dragover"
         @dragleave="dragleave"
-        droppable="true"
       >
         <img
           src="@/assets/woman_enjoy_music.png"
@@ -58,11 +56,10 @@
     </div>
     <div class="xc-main__article-card">
       <div
-        @drop="drop"
+        @drop.stop="drop"
         @dragenter.prevent="dragenter"
-        @dragover.prevent.stop="dragover"
+        @dragover.prevent="dragover"
         @dragleave="dragleave"
-        droppable="true"
       >
         <img
           src="@/assets/woman_take_payment.png"
@@ -95,49 +92,48 @@ export default {
   },
   data() {
     return {
-      dragSrcEl: null,
-      dragTarEl: null
+      dragSrcEl: null
     };
   },
   methods: {
     dragstart(e) {
-      console.log("drag has started.", e.target);
       this.dragSrcEl = e.target;
-      e.target.style.opacity = ".4";
-      e.dataTransfer.effectAllowed = "move";
-      e.dataTransfer.setData("text/plain", this.dragSrcEl);
-      console.log("dragSrcEl is now:", this.dragSrcEl);
+      e.dataTransfer.setData("text/uri-list", e.target.src);
+      e.dataTransfer.setData("text/alt", e.target.alt);
+      e.target.classList.add("moving");
     },
     dragenter(e) {
-      console.log("dragenter triggered.", e.target);
-      this.dragTarEl = e.target;
-      e.target.classList.add("dropzone");
+      if (e.target.tagName === "IMG") {
+        e.target.classList.add("dropzone");
+      }
     },
-    dragover(e) {
-      // console.log("dragover triggered.", e.target);
-    },
+    dragover() {},
     dragleave(e) {
-      console.log("dragleave triggered.", e.target);
-      e.target.classList.remove("dropzone");
+      if (e.target.tagName === "IMG") {
+        e.target.classList.remove("dropzone");
+      }
     },
-    dragend(e) {
-      console.log("dragend triggered.", e.target);
-      e.target.style.opacity = "1";
-      e.target.classList.remove("dropzone");
-      // if (this.dragTarEl) {
-      //   console.log("fire drag end:", e.target.parentNode);
-      //   e.target.parentNode.innerHTML = this.dragTarEl;
-      // }
+    dragend() {
+      let leftoverDropzones = document.getElementsByClassName("dropzone");
+      Array.from(leftoverDropzones).forEach(element => {
+        element.classList.remove("dropzone");
+      });
+      let leftoverMoving = document.getElementsByClassName("moving");
+      Array.from(leftoverMoving).forEach(element => {
+        element.classList.remove("moving");
+      });
+      this.dragSrcEl = null;
     },
     drop(e) {
-      console.log("drop triggered.", e.target);
-      if (this.dragSrcEl !== this.dragTarEl) {
-        console.log("DROP IS GOOD, e.target:", e.target);
-        console.log("drop target innerHTML:", e.target.innerHTML);
-        this.dragSrcEl = e.target.parentNode.innerHTML;
-        console.log(e.dataTransfer.getData("text/plain"));
-        e.target.parentNode.innerHTML = e.dataTransfer.getData("text/html");
+      if (this.dragSrcEl.src === e.target.src) {
+        return;
       }
+      let targetURL = e.target.src;
+      let targetAlt = e.target.alt;
+      e.target.src = e.dataTransfer.getData("text/uri-list");
+      e.target.alt = e.dataTransfer.getData("text/alt");
+      this.dragSrcEl.src = targetURL;
+      this.dragSrcEl.alt = targetAlt;
     }
   }
 };
@@ -153,6 +149,7 @@ export default {
 
   .xc-main__article-card {
     padding: 10px;
+
     @media screen and (min-width: $sm) {
       max-width: 33%;
     }
@@ -164,6 +161,10 @@ export default {
 
       &.dropzone {
         border: 3px dashed rgb(0, 190, 41);
+      }
+
+      &.moving {
+        opacity: 0.4;
       }
     }
 
