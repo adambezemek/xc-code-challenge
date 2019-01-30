@@ -1,6 +1,6 @@
 <template>
     <div class="grid hide-xs" tag="div"> 
-        <div v-for="(img, i) in imgurls" class="col" :key="img.id">
+        <div v-for="(img, i) in imgurls" class="grid__col" :key="img.id">
             <img class="img-responsive" 
                 :src="img.url" 
                 draggable="true" 
