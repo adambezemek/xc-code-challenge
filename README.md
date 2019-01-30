@@ -1,4 +1,4 @@
-# xc-code-challenge
+# xc-code-challenge - Brian Hernandez Submission
 
 ## Project setup
 ```
@@ -24,9 +24,6 @@ npm run test
 ```
 npm run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## Description
 
