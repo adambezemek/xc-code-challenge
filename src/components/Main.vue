@@ -7,8 +7,8 @@
                     <div class="img-wrap">
                         <img class="img-responsive show-xs" 
                             :src="imgurls[0].url" 
-                            :alt="imgurls.altText"
-                            :title="imgurls.title"
+                            :alt="imgurls[0].altText"
+                            :title="imgurls[0].title"
                         />
                     </div>
                   <h2>Introduction to Habitat</h2>
@@ -22,8 +22,8 @@
                     <div class="img-wrap">
                         <img class="img-responsive show-xs" 
                             :src="imgurls[1].url" 
-                            :alt="imgurls.altText"
-                            :title="imgurls.title"
+                            :alt="imgurls[1].altText"
+                            :title="imgurls[1].title"
                         />
                     </div>
                   <h2>Modules</h2>
@@ -36,8 +36,8 @@
                   <div class="img-wrap">
                     <img class="img-responsive show-xs" 
                         :src="imgurls[2].url" 
-                        :alt="imgurls.altText" 
-                        :title="imgurls.title"
+                        :alt="imgurls[2].altText" 
+                        :title="imgurls[2].title"
                     />
                   </div>
                   <h2>Getting Started</h2>
