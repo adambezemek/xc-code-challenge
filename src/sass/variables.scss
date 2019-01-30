@@ -1,7 +1,8 @@
 //Responsive breakpoints -- currently landscape tablets may be wonky. TODO: fix this maybe 
-$screen-sm: 768px; 
-$screen-md: 992px; 
-$screen-lg: 1200px; 
+$screen-xs-max: 767.98px; //to account for iPads being exactly 768px. 
+$screen-sm:     768px; 
+$screen-md:     992px; 
+$screen-lg:     1200px; 
 
 ///////////////////
 // Color Scheme //

@@ -2,7 +2,7 @@
     <div class="main">
         <Draggable :imgurls="imgurls" @orderUpdated="updateImgurls"></Draggable>
         <div class="grid">
-            <div class="col">
+            <section class="col">
                 <div class="text-wrap">
                     <div class="img-wrap">
                         <img class="img-responsive show-xs" :src="imgurls[0]"/>
@@ -12,8 +12,8 @@
                     <p>The solution is built on the Sitecore Helix guidelines, which focuses on incrasing productivity and quality in Sitecore projects</p>
                     <a class="btn" href="www.google.com">Read More</a>
                 </div>
-            </div>
-            <div class="col">
+            </section>
+            <section class="col">
                 <div class="text-wrap">
                     <div class="img-wrap">
                         <img class="img-responsive show-xs" :src="imgurls[1]"/>
@@ -22,8 +22,8 @@
                   <p>The Habitat example implementation has a range of modules which covers the basics of a Sitecore website</p>
                   <a class="btn" href="www.google.com">Read More</a>    
                 </div>
-            </div>
-            <div class="col">
+            </section>
+            <section class="col">
                 <div class="text-wrap">
                   <div class="img-wrap">
                     <img class="img-responsive show-xs" :src="imgurls[2]"/>
@@ -32,7 +32,7 @@
                   <p>Sitecore Helix - a defined methodology with conventions and practises - Habitat is an example implementation available for your understanding.</p>
                   <a class="btn" href="www.google.com">Read More</a> 
                 </div>
-            </div>
+            </section>
         </div>
     </div>
     

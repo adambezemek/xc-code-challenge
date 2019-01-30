@@ -14,7 +14,7 @@
 body {
     font-family: $serif;
     //Extra small screesn 
-    @media (max-width: $screen-sm) {
+    @media (max-width: $screen-xs-max) {
     }
     //Small Screens
     @media (min-width: $screen-sm) {
@@ -68,7 +68,7 @@ a {
 }
 
 .hide-xs {
-    @media (max-width: $screen-sm) {
+    @media (max-width: $screen-xs-max) {
         display: none;
     }
 }
