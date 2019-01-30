@@ -8,6 +8,10 @@
                 :id="i" 
                 :title="img.title"
                 :alt="img.altText"
+                @dragstart="dragStart"
+                @drop="drop"
+                @dragenter.prevent
+                @dragover.prevent
              />
         </div>
     </div>
@@ -50,13 +54,7 @@
                 }
                 this.draggedEl = ""; //reset our dragged element to blank, ready to be reused.
             }
-        }, 
-        mounted: function () {
-            window.addEventListener('dragstart', this.dragStart);
-            window.addEventListener('drop', this.drop);
-            window.addEventListener('dragenter', (e) => e.preventDefault());
-            window.addEventListener('dragover', (e) => e.preventDefault());
-        }   
+        },  
     }
 
 </script>
