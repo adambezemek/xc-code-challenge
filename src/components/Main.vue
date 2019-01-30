@@ -3,7 +3,7 @@
         <Hero></Hero>
         <Draggable :imgurls="imgurls" @orderUpdated="updateImgurls"></Draggable>
         <div class="grid">
-            <section class="col">
+            <section class="grid__col">
                 <div class="text-wrap">
                     <div class="img-wrap">
                         <img class="img-responsive show-xs" 
@@ -18,7 +18,7 @@
                     <a class="btn" href="www.google.com">Read More</a>
                 </div>
             </section>
-            <section class="col">
+            <section class="grid__col">
                 <div class="text-wrap">
                     <div class="img-wrap">
                         <img class="img-responsive show-xs" 
@@ -32,7 +32,7 @@
                   <a class="btn" href="www.google.com">Read More</a>    
                 </div>
             </section>
-            <section class="col">
+            <section class="grid__col">
                 <div class="text-wrap">
                   <div class="img-wrap">
                     <img class="img-responsive show-xs" 

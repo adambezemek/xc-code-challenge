@@ -1,7 +1,7 @@
 .grid {
     display: flex; 
     margin: 0 auto; 
-    .col {
+    &__col {
         padding: 10px;  
         @media (max-width: $screen-xs-max) {
             display: flex;
@@ -12,7 +12,6 @@
         }
     }
 
-
     @media (max-width: $screen-xs-max) {
         flex-direction: column;
         
@@ -21,26 +20,22 @@
         justify-content: space-around;
         max-width: 1330px;
     }
-    //Tablet/low res laptop
-    @media (min-width: $screen-md) {
-
-    }
-    //Desktop
-    @media (min-width: $screen-lg) {
-
-    }
 }
 
-.h-col {
+.header-col {
     flex: 1;
     display: flex;
     align-items: center; 
 }
 
-.h-col-end {
+.header-col-start {
+    justify-content: flex-start;
+}
+
+.header-col-end {
     justify-content: flex-end; 
 }
 
-.h-col-center {
+.header-col-center {
     justify-content: center;
 }
