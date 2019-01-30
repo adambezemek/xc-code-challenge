@@ -1,6 +1,5 @@
 <template>
-    <!-- Is 'figure' really right here? Unsure --> 
-    <figure class="hero-shot"></figure>
+    <section class="hero-shot"></section>
 </template>
 
 <script>
