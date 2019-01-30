@@ -1,11 +1,5 @@
 // Site wide utility styles
 
-// Container
-.xc-u-container {
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
 // Visually hide element but still safe for screen readers
 @mixin visually-hidden {
   // https://snook.ca/archives/html_and_css/hiding-content-for-accessibility

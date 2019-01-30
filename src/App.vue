@@ -45,4 +45,10 @@ ol {
   padding-left: 0;
   list-style-type: none;
 }
+
+// Container Utility
+.xc-u-container {
+  max-width: 1000px;
+  margin: 0 auto;
+}
 </style>
