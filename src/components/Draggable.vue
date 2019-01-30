@@ -1,11 +1,13 @@
 <template>
     <div class="grid hide-xs" tag="div"> 
-        <div v-for="(img, i) in imgurls" class="col" :key="img">
+        <div v-for="(img, i) in imgurls" class="col" :key="img.id">
             <img class="img-responsive" 
-                :src="img" 
+                :src="img.url" 
                 draggable="true" 
                 :class="className"
                 :id="i" 
+                :title="img.title"
+                :alt="img.altText"
              />
         </div>
     </div>

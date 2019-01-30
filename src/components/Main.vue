@@ -5,7 +5,11 @@
             <section class="col">
                 <div class="text-wrap">
                     <div class="img-wrap">
-                        <img class="img-responsive show-xs" :src="imgurls[0]"/>
+                        <img class="img-responsive show-xs" 
+                            :src="imgurls[0].url" 
+                            :alt="imgurls.altText"
+                            :title="imgurls.title"
+                        />
                     </div>
                   <h2>Introduction to Habitat</h2>
                     <p>Sitecore Habitat is a range of sites demonstrating the capabilities of the Sitecore Experience Platform</p>
@@ -16,7 +20,11 @@
             <section class="col">
                 <div class="text-wrap">
                     <div class="img-wrap">
-                        <img class="img-responsive show-xs" :src="imgurls[1]"/>
+                        <img class="img-responsive show-xs" 
+                            :src="imgurls[1].url" 
+                            :alt="imgurls.altText"
+                            :title="imgurls.title"
+                        />
                     </div>
                   <h2>Modules</h2>
                   <p>The Habitat example implementation has a range of modules which covers the basics of a Sitecore website</p>
@@ -26,7 +34,11 @@
             <section class="col">
                 <div class="text-wrap">
                   <div class="img-wrap">
-                    <img class="img-responsive show-xs" :src="imgurls[2]"/>
+                    <img class="img-responsive show-xs" 
+                        :src="imgurls[2].url" 
+                        :alt="imgurls.altText" 
+                        :title="imgurls.title"
+                    />
                   </div>
                   <h2>Getting Started</h2>
                   <p>Sitecore Helix - a defined methodology with conventions and practises - Habitat is an example implementation available for your understanding.</p>
@@ -51,9 +63,24 @@ export default {
   data() {
       return {
           imgurls: [
-              img1, 
-              img2, 
-              img3
+              {
+                  id: 0,
+                  url: img1,
+                  title: 'Man typing',
+                  altText: 'Man wearing a baseball cap typing on a keyboard and looking at a monitor that is not on.'
+              }, 
+              {
+                  id: 1, 
+                  url: img2,
+                  title: 'Woman with headphones',
+                  altText: 'Woman with short red hair wearing headphones and holding a tablet while smirking into the distance.'    
+              }, 
+              {
+                  id: 2,
+                  url: img3,
+                  title: 'Cashier',
+                  altText: 'Woman in striped apron accepting a credit card for payment.' 
+              }
           ],
       }
   },
