@@ -1,6 +1,6 @@
 <template>
-    <div class="download">
-    </div>
+    <section class="download">
+    </section>
     
 </template>
 
