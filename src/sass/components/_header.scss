@@ -7,7 +7,18 @@
     min-height: 70px; 
     display: flex;
     font-family: $sans-serif;
-
+    &__col {
+        flex: 1;
+        display: flex;
+        align-items: center; 
+        &--center {
+            justify-content: center;
+        }
+        &--end {
+            justify-content: flex-end;
+        }
+    }
+    
     //Small Screens
     @media (min-width: $screen-sm) {
         height: 100px;

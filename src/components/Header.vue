@@ -1,7 +1,7 @@
 <template>
     <header class="header">
         <!-- mobile header --> 
-        <div class="header-col show-xs">
+        <div class="header__col show-xs">
             <div class="hamburger-nav">
                 <button href="#" class="hamburger-nav__button">
                     <i class="fas fa-bars"></i>
@@ -10,7 +10,7 @@
             </div>
 
         </div>
-        <div class="header-col header-col-center">
+        <div class="header__col header__col--center">
             <a href="index.html"><img class="logo show-md" alt="Habitat Logo" src="../assets/images/logo.png" ></a>
         </div>
         <!-- Navigation, hidden on smaller screens --> 
@@ -30,7 +30,7 @@
                 </li>
             </ul>
         </nav>
-        <div class="header-col header-col-end">
+        <div class="header__col header__col--end">
             <div class="icons">
                 <a href="#" class="icons__link"><i class="fas fa-globe-americas"></i></a>
                 <a href="#" class="icons__link"><i class="fas fa-search"></i></a>  
