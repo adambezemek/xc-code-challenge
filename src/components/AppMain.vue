@@ -114,6 +114,9 @@ export default {
       }
     },
     dragend() {
+      // Gather any remainging elements with .dropzone or .moving
+      // classes into an Array and remove those classes from
+      // each element
       let leftoverDropzones = document.getElementsByClassName("dropzone");
       Array.from(leftoverDropzones).forEach(element => {
         element.classList.remove("dropzone");
@@ -122,9 +125,12 @@ export default {
       Array.from(leftoverMoving).forEach(element => {
         element.classList.remove("moving");
       });
+
       this.dragSrcEl = null;
     },
     drop(e) {
+      // Do not do the src and alt attribute swap if the
+      // images are the same.
       if (this.dragSrcEl.src === e.target.src) {
         return;
       }

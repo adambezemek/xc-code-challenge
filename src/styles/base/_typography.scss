@@ -96,3 +96,4 @@ $display-type-scale-base: minor-third;
 @media (min-width: 768px) {
   @include create-heading-type-scale(minor-third);
 }
+// End responsive typography block
