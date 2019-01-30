@@ -1,5 +1,5 @@
 <template>
-    <div class="hero-shot"></div>
+    <section class="hero-shot"></section>
 </template>
 
 <script>
