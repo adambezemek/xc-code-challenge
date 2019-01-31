@@ -1,0 +1,65 @@
+.sample-article {
+  color: #6a96b2;
+  display: inline-block;
+  max-width: 30%;
+  padding-right: 1.5%;
+}
+
+.sample-article:last-child {
+  padding: 0px;
+}
+
+.article-img {
+  max-width: 500px;
+  width: 100%;
+}
+
+.button {
+  border: 2px #6a96b2 solid;
+  border-radius: 20px;
+  color: #6a96b2;
+  display: inline-block;
+  margin: 10px 0 20px;
+  padding: 5px 10px;
+  font-size: 18px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 767px) {
+  .sample-article {
+    max-width: 100%;
+    padding-right: 0;
+  }
+}
+.brand {
+  display: inline-block;
+  padding: 0 30px 0 15px;
+}
+
+.navbar {
+  display: inline-block;
+}
+
+.footer-topics {
+  display: inline-block;
+  text-align: center;
+  width: 49%;
+}
+
+.about-grid {
+  display: inline-block;
+  width: 35%;
+}
+
+.article-grid {
+  padding: 0 100px;
+}
+
+@media screen and (max-width: 1023px) {
+  .article-grid {
+    padding: 0;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */
