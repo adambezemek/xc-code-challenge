@@ -16,7 +16,15 @@
   </head>
   <body>
     <noscript>
-      <strong>We&rsquo;re sorry but xc-code-challenge doesn&rsquo;t work properly without JavaScript enabled. Here are the <a href="https://www.enable-javascript.com/" target="_blank">
+    <!--
+      Support: Security
+      Details: target = "_blank" can be considered a security risk which could allow for attack vectors such as Phishing
+      Supporting Details: https://github.com/mathiasbynens/rel-noopener
+      Supporting Details: https://github.com/danielstjules/blankshield
+      Supporting Details: https://news.ycombinator.com/item?id=11553740
+      Fix: Use`rel="noopener noreferrer"` on links which use target= "_blank"
+    -->
+      <strong>We&rsquo;re sorry but xc-code-challenge doesn&rsquo;t work properly without JavaScript enabled. Here are the <a href="https://www.enable-javascript.com/" target="_blank" rel="noopener noreferrer">
         instructions how to enable JavaScript in your web browser</a>.</strong>
     </noscript>
     <div id="app"></div>
