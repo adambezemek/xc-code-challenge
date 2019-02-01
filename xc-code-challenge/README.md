@@ -1,8 +1,10 @@
 # xc-code-challenge
 
+## Development Machine Requirements
+Install [yarn](https://yarnpkg.com/lang/en/docs/install/)
+
 ## Project setup
 ```
-Install [yarn](https://yarnpkg.com/lang/en/docs/install/)
 yarn install
 ```
 
