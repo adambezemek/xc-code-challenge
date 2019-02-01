@@ -11,5 +11,14 @@ module.exports = {
     // Support: Performance - GZIP
     "postcss-sorting": require("./postcss-sorting.json"),
 
+    "cssnano":
+    {
+      safe: true,
+      discardComments: {
+          removeAll: true
+      },
+      normalizeCharset: true,
+    }
+
   }
 }
