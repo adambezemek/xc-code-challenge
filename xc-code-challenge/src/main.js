@@ -1,3 +1,4 @@
+import "@/css/_settings/xc-code-challenge.css";
 import "@/css/base/normalize.css";
 import Vue from 'vue'
 import App from './App.vue'
