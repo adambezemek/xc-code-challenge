@@ -14,6 +14,7 @@
     "@vue/cli-service": "^3.4.0",
     "vue-template-compiler": "^2.5.21",
     "postcss-ordered-values": "^4.1.1",
-    "postcss-sorting": "^4.0.1"
+    "postcss-sorting": "^4.0.1",
+    "cssnano": "^4.1.8"
   }
 }
