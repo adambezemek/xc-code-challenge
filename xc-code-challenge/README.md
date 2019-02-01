@@ -5,7 +5,7 @@ Install [yarn](https://yarnpkg.com/lang/en/docs/install/)
 
 ## Project setup
 ```
-yarn install
+yarn install (In the event you forget, running serve will run yarn install as well.)
 ```
 
 ### Compiles and hot-reloads for development
