@@ -2,6 +2,7 @@
 
 ## Project setup
 ```
+Install [yarn](https://yarnpkg.com/lang/en/docs/install/)
 yarn install
 ```
 
