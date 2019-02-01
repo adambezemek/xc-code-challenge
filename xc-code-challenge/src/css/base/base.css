@@ -1,0 +1,229 @@
+/**
+ * Base styles: opinionated defaults that provides a starting point more suitable for web applications.
+ *
+ */
+
+/**
+ * 1. Design Tip: Never Use Black: http://ianstormtaylor.com/design-tip-never-use-black/
+ * 2. Eliminate horizontal centering "page jumps": http://css-tricks.com/eliminate-jumps-in-horizontal-centering-by-forcing-a-scroll-bar/
+ * 3. Prevent padding and border from affecting element width. https://css-tricks.com/inheriting-box-sizing-probably-slightly-better-best-practice/
+ * 4. Set the browser to emphasize legibility over rendering speed and geometric precision by enabling kerning and optional ligatures - https://developer.mozilla.org/en-US/docs/Web/CSS/text-rendering
+ * 5. Set the browser to determine whether font kerning should be used or not - https://developer.mozilla.org/en-US/docs/Web/CSS/font-kerning
+ * 6. Set font-smoothing on retina screens. Usually one should use this on dark background only http://usabilitypost.com/2012/11/05/stop-fixing-font-smoothing/
+ *    But: because we have enough pixels here (retina!) it shouldn't be a problem. It just renders more beautiful. Credit: https://gist.github.com/dpschen/aebfd3e140333fdfd5d4f9a79eb3dd2b
+ */
+
+html
+{
+    overflow-y: scroll; /* 2 */
+    box-sizing: border-box; /* 3 */
+    min-height: 100%; /* 2 */
+    color: #222; /* 1 */
+    font-size: var(--initial-rem-unit);
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 1.3), only screen and (-o-min-device-pixel-ratio: 13/10), only screen and (min-resolution: 120dpi) {
+    html {
+        -moz-osx-font-smoothing: grayscale /* 6 */;
+        -webkit-font-smoothing: antialiased /* 6 */;
+    }
+}
+
+*,
+*::before,
+*::after
+{
+    box-sizing: inherit; /* 3 */
+    text-rendering: optimizeLegibility; /* 4 */
+    font-kerning: auto; /* 5 */
+}
+
+/**
+ * 1. Don't show your underwear... http://www.zeldman.com/2008/11/07/is-your-websites-underwear-showing/
+ * 2. Experimental(https://developer.mozilla.org/en-US/docs/Web/CSS/text-size-adjust): Force text to reflow at the same 'zome level' rather than 'zooming in or out a little' when rotating between portrait & landscape on some mobile devices - https://twitter.com/innovati/status/951119975821008896
+ */
+
+body
+{
+    background: #fff; /* 1 */
+    -webkit-text-size-adjust: 100%; /* 2 */
+    -moz-text-size-adjust: 100%; /* 2 */
+    -ms-text-size-adjust: 100%; /* 2 */
+    font-family: var(--initial-font-family);
+    -moz-font-feature-settings: "liga" on;
+}
+
+
+/**
+ * Remove text-shadow in selection highlight:
+ * https://twitter.com/miketaylr/status/12228805301
+ *
+ * These selection rule sets have to be separate.
+ * Customize the background color to match your design.
+ * 1. Defaulting to a blue which has a 4.7 contrast ratio from #fff http://leaverou.github.io/contrast-ratio/#%23fff-on-%230074D9
+ */
+
+::selection
+{
+    background: #0074d9; /* 1 */
+    color: #fff; /* 1 */
+    text-shadow: none;
+}
+
+
+/**
+ * Placeholder styles
+ *
+ * Experimental: The `::placeholder` css pseudo-element has not been stabilized and is considered experimental technology.
+ *
+ * 1. The default color of the placeholder text is not of sufficient contrast with its default background color - https://www.paciellogroup.com/blog/2011/02/html5-accessibility-chops-the-placeholder-attribute/
+ * For example: Safari & Chrome at some point used #A9A9A9 which has a 2.35 contrast ratio which fails WCAG 2.0 - https://github.com/necolas/normalize.css/pull/603#issuecomment-230118874
+ * 2. Until `::placeholder` becomes standardized vendor-prefixed selectors are recommended to reach across multiple browsers.
+ * https://css-tricks.com/almanac/selectors/p/placeholder/
+ * 3. According to CSS Selectors Level 4: Invalid Selectors and Error Handling - A group of selectors containing an invalid
+ * will be ignored if it contains an unknown selector - For this reason placeholder rules must be separate for each browser.
+ * Supporting Details: https://stackoverflow.com/a/2610741
+ * Additional Details: http://www.xanthir.com/blog/b4JF0
+ * Additional Details: https://www.w3.org/TR/selectors/upcoming/#invalid
+ * 4. Support: IE - using `:-ms-input-placeholder` alone will not style an input or textarea if the color is set somewhere else within the
+ * css unless you make sure to target `input:-ms-input-placeholder` Example: https://jsfiddle.net/9kkef/19/ Fix: https://jsfiddle.net/9kkef/20/
+ * 5. Assuming the background is white, the lightest color that can be used for a 4.54 contrast ratio is #767676 - https://twitter.com/rogerjohansson/status/1007147167130312704
+ * 6. Fix issue where Firefox placeholder applies opacity starting with Windows/Mozilla Firefox Quantum 59.0.2 (x64) - Supporting Details: https://github.com/necolas/normalize.css/issues/741
+ *
+ */
+
+
+/* WebKit browsers */
+::-webkit-input-placeholder
+{
+    color: #767676 /* 1 */ /* 3 */ /* 5 */;
+}
+
+/* Mozilla Firefox 19+ */
+::-moz-placeholder
+{
+    color: #767676 /* 1 */ /* 3 */ /* 5 */;
+    opacity: 1 /* 6 */;
+}
+
+/* MS Edge */
+::-ms-input-placeholder
+{
+    color: #767676 /* 1 */ /* 3 */ /* 5 */;
+}
+
+/* Internet Explorer 10+ */
+/* autoprefixer: off */
+/* Disable autoprefixer as it will insert `::-ms-input-placeholder` which IE does not understand - See Note 3 */
+/* Disabling `selector-list-comma-newline-before` as it complains about space before comma where I have a comment note placed */
+:-ms-input-placeholder,
+input:-ms-input-placeholder /* 4 */,
+textarea:-ms-input-placeholder /* 4 */
+{
+    color: #767676 /* 1 */ /* 3 */ /* 5 */;
+}
+
+/* Specification Working Draft */
+::placeholder
+{
+    color: #767676 /* 1 */ /* 2 */ /* 3 */ /* 5 */;
+}
+
+
+/**
+ * A better looking default horizontal rule
+ */
+
+hr
+{
+    display: block;
+    padding: 0;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+}
+
+
+/**
+ * Remove default fieldset styles.
+ */
+
+fieldset
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+
+/**
+ * Allow only vertical resizing of textareas.
+ */
+
+textarea
+{
+    resize: vertical;
+}
+
+
+/**
+ * 1. So that `alt` text is visually offset if images don't load.
+ * 2. Fluid images.
+ * 3. Maintain aspect ratio of scaled images
+ */
+
+img
+{
+    max-width: 100%; /* 2 */
+    height: auto; /* 3 */
+    font-style: italic; /* 1 */
+}
+
+
+/**
+ * Non-fluid images if you specify `width` and/or `height` attributes.
+ */
+
+img[width],
+img[height]
+{
+    max-width: none;
+}
+
+
+/**
+ * Don't show pointer cursor on readonly inputs
+ */
+
+[readonly]
+{
+    cursor: default;
+}
+
+
+/**
+ * Suppress the focus outline on elements that cannot be accessed via keyboard.
+ * This prevents an unwanted focus outline from appearing around elements that
+ * might still respond to pointer events.
+ *
+ * Credit: https://github.com/suitcss/base
+ */
+
+[tabindex="-1"]:focus
+{
+    outline: none !important;
+}
+
+
+/**
+ * Support: Firefox 4+
+ * Details: Input fields with 'required' get red shadow/border before submitting
+ * Supporting Details: https://github.com/angular/angular.js/issues/12102
+ * Supporting Details: http://stackoverflow.com/questions/3809146/firefox-4-required-input-form-red-border-outline
+ * Fix: Rather than disabling native browser validation - remove the styles on invalid required inputs and apply them via non-native browser validation
+ */
+
+[required]:invalid
+{
+    box-shadow: none;
+}
