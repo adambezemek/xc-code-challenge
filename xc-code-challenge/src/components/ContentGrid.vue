@@ -1,10 +1,12 @@
 <template>
   <div>
-
-      <draggable v-model="images"  @start="drag=true" @end="drag=false">
-        <div v-for="(image, index) in images" :key="image+index">
-          <img v-bind:src="image.src" >
-        </div>
+      <draggable v-model="images" :options="{draggable:'.js-draggable'}" @start="drag=true" @end="drag=false">
+        <template v-for="(element, index) in images">
+          <img class="js-draggable" :src="element.src" :alt="element.alttext" :key="index" />
+          <div :key="section[index].name">
+          {{section[index].name}}
+          </div>
+        </template>
       </draggable>
 
   </div>
@@ -23,9 +25,13 @@ export default {
    return {
     currentlyDragging: null,
     loggedEvent: '',
-    images: [{name:'Image 1',src:'http://placehold.it/100/000000/ffffff'},
-                {name:'Image 2',src:'http://placehold.it/100/C93742/ffffff'},
-                {name:'Image 3',src:'http://placehold.it/100/6894D1/ffffff'}],
+    images:
+            [{alttext:'A male typing away at his keyboard.',src:'http://placehold.it/100/000000/ffffff'},
+            {alttext:'A female enjoying music while she holds her tablet.',src:'http://placehold.it/100/C93742/ffffff'},
+            {alttext:'A female employee being handed a credit card. ',src:'http://placehold.it/100/6894D1/ffffff'}],
+    section: [{name:'Introduction to Habitat'},
+              {name: 'Modules'},
+              {name: 'Getting Started'}]
    }
  }
 };
