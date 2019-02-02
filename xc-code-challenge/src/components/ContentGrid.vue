@@ -1,13 +1,14 @@
 <template>
   <div>
-      <draggable v-model="images" :options="{draggable:'.js-draggable'}" @start="drag=true" @end="drag=false">
-        <template v-for="(element, index) in images">
-          <img class="js-draggable" :src="element.src" :alt="element.alttext" :key="index" />
-          <div :key="section[index].name">
-          {{section[index].name}}
-          </div>
-        </template>
-      </draggable>
+
+  <draggable class="l-grid l-grid--one-third-columns@TabletPortraitMedium" v-model="images" :options="{draggable:'.js-draggable'}" @start="drag=true" @end="drag=false">
+    <template v-for="(element, index) in images">
+      <img class="js-draggable" :class="'l-grid__content--header-'+(index+1)" :src="element.src" :alt="element.alttext" :key="index" />
+      <div :key="section[index].name" :class="'l-grid__content--section-'+(index+1)">
+      {{section[index].name}}
+      </div>
+    </template>
+  </draggable>
 
   </div>
 </template>
@@ -26,9 +27,9 @@ export default {
     currentlyDragging: null,
     loggedEvent: '',
     images:
-            [{alttext:'A male typing away at his keyboard.',src:'http://placehold.it/100/000000/ffffff'},
-            {alttext:'A female enjoying music while she holds her tablet.',src:'http://placehold.it/100/C93742/ffffff'},
-            {alttext:'A female employee being handed a credit card. ',src:'http://placehold.it/100/6894D1/ffffff'}],
+            [{alttext:'A male typing away at his keyboard.',src:'http://placekitten.com/360/360'},
+            {alttext:'A female enjoying music while she holds her tablet.',src:'http://placekitten.com/361/361'},
+            {alttext:'A female employee being handed a credit card. ',src:'http://placekitten.com/362/362'}],
     section: [{name:'Introduction to Habitat'},
               {name: 'Modules'},
               {name: 'Getting Started'}]
@@ -39,5 +40,35 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+
+.l-grid {
+  display: grid;
+  grid-gap:1rem;
+  grid-template-areas:
+    "header1"
+    "content1"
+    "header2"
+    "content2"
+    "header3"
+    "content3";
+}
+
+.l-grid__content--header-1{ grid-area: header1; }
+.l-grid__content--header-2{ grid-area: header2; }
+.l-grid__content--header-3{ grid-area: header3; }
+.l-grid__content--section-1{ grid-area: content1; }
+.l-grid__content--section-2{ grid-area: content2; }
+.l-grid__content--section-3{ grid-area: content3; }
+
+
+@media only screen and (min-width: 48em) {
+  .l-grid--one-third-columns\@TabletPortraitMedium {
+    grid-gap:2rem;
+    grid-template-columns: 360px 360px 360px;
+    grid-template-areas:
+    "header1 header2 header3"
+    "content1 content2 content3";
+  }
+}
 
 </style>
