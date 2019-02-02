@@ -1,17 +1,17 @@
 <template>
   <div id="app">
     <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="hello world"/>
+    <ContentGrid />
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import ContentGrid from './components/ContentGrid.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    ContentGrid
   }
 }
 </script>
