@@ -48,8 +48,63 @@
           </a>
         </li>
       </ul>
-      <!-- Mobile Menu -->  <!--Logo--> <!--Navigation -->
 
+    <a href="/">
+      <!-- TODO: Improvement - Get a transparent logo so the background colors don't clash. -->
+      <img src="/images/Habitat-logo.png" alt="Habitat Logo" />
+    </a>
+
+    <nav>
+      <!--
+          Support: Accessibility (A11y) & Vue
+          Details: Vue reads falsey as 'not needed' so it will remove the attribute all together
+          Supporting Details: https://twitter.com/heydonworks/status/1011668371354652672
+          Additional Details: https://github.com/vuejs/vue/issues/7422
+          Fix: Cast the boolean to a string so Vue doesn't remove it.
+      -->
+      <button class="c-mobile-menu" type="button" @click="MobileMenuOpen = !MobileMenuOpen"
+              aria-label="Menu" aria-controls="navigation" :aria-expanded=MobileMenuOpen.toString()>
+        <span class="c-mobile-menu__icon"></span>
+        <div class="c-mobile-menu__label">
+          Menu
+        </div>
+      </button>
+
+      <div id="navigation">
+        <ul>
+          <li>
+            <a href="https://example.com">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="https://example.com">
+            About Habitat
+            </a>
+            <ul>
+              <li>
+                <a href="https://example.com">Sublink</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="https://example.com">
+              Modules
+            </a>
+            <ul>
+              <li>
+                <a href="https://example.com">Sublink</a>
+              </li>
+            </ul>
+          </li>
+          <li>
+            <a href="https://example.com">
+              More Info
+            </a>
+          </li>
+        </ul>
+      </div>
+    </nav>
 
       <ul class="l-account-options">
         <li>
@@ -211,11 +266,95 @@ export default {
   name: 'app',
   components: {
     ContentGrid
+  },
+  data(){
+    return {
+      MobileMenuOpen: false
+    }
   }
 }
 </script>
 
 <style>
+
+.c-mobile-menu
+{
+  cursor: pointer;
+}
+
+.c-mobile-menu__icon
+{
+  position: relative;
+  margin-top: 1rem;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.c-mobile-menu__icon:before{
+  margin-top:-12px;
+}
+
+.c-mobile-menu__icon:after{
+  margin-top:12px;
+}
+
+.c-mobile-menu__icon:before,
+.c-mobile-menu__icon:after
+{
+  position: absolute;
+  content: "";
+}
+
+.c-mobile-menu__icon,
+.c-mobile-menu__icon:before,
+.c-mobile-menu__icon:after
+{
+  width: 30px;
+  height: 6px;
+  background-color: currentColor;
+  display: block;
+}
+
+.c-mobile-menu__label
+{
+  margin-top:1rem;
+  height: 0;
+  visibility: hidden;
+}
+
+@media screen and (-ms-high-contrast: active)
+{
+  /**
+  * Support: Accessibility (A11y)
+  * Details: When a user has high contrast, they won't be able to see the hamburger icon, so add the border when high-contrast mode is active so users can see it.
+  */
+
+  .c-mobile-menu__icon,
+  .c-mobile-menu__icon:after,
+  .c-mobile-menu__icon:before
+  {
+      border: 1px solid;
+  }
+
+  .c-mobile-menu__icon:after
+  {
+      margin-top: 11px;
+  }
+
+  .c-mobile-menu__icon:before,
+  .c-mobile-menu__icon:after
+  {
+      margin-left: -1px /* Because pseudo-elements are contained by the elements formatting box & that box has a border applied, a negative margin needs to be applied to keep them aligned */;
+  }
+
+  .c-mobile-menu__label
+  {
+    visibility: visible;
+    height: auto;
+  }
+
+}
+
 .c-skip-nav
 {
   padding: 0.5rem !important;
