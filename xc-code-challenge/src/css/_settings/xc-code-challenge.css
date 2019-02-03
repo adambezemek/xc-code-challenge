@@ -14,6 +14,7 @@
 
     --initial-rem-unit: 1rem;
     --initial-font-family: roboto_slab, Rockwell,"Courier Bold",Courier,Georgia,Times,"Times New Roman",serif;
+    --system-fonts: '-apple-system', 'system-ui', 'BlinkMacSystemFont', 'Segoe UI', 'Roboto', 'Helvetica Neue', 'Arial', 'sans-serif', 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 
     /* Note: Color names from: http://chir.ag/projects/name-that-color/ */
 
