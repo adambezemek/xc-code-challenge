@@ -110,7 +110,7 @@
             <span class="u-visually-hidden">Around the world</span>
           </a>
         </li>
-        <li class=""> <!-- NOTE: Does not appear on mobile -->
+        <li class="c-account-options__my-account">
           <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="fas fa-user">
             <span class="u-visually-hidden">User <!--If you are not paying for a product, then you are the product not user--></span>
           </a>
@@ -274,5 +274,17 @@ export default {
 </script>
 
 <style>
+
+.c-account-options__my-account
+{
+  display: none !important;
+}
+
+@media only screen and (min-width: 48em) {
+  .c-account-options__my-account
+  {
+    display: inline-block !important;
+  }
+}
 
 </style>
