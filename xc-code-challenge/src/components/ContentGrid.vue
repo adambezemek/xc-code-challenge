@@ -5,7 +5,10 @@
     <template v-for="(element, index) in images">
       <img class="js-draggable l-grid__content--header" :src="element.src" :alt="element.alttext" :key="index" />
       <div :key="section[index].name" class="l-grid__content--section">
-      {{section[index].name}}
+        <h2 v-text="section[index].name"></h2>
+        <div v-html="section[index].content">
+        </div>
+        <a :href="section[index].url">Read More</a>
       </div>
     </template>
   </draggable>
