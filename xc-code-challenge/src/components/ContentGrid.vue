@@ -4,12 +4,12 @@
   <draggable class="c-content-grid" :options="{draggable:'.js-draggable'}" @start="drag=true" @end="drag=false">
     <template v-for="(element, index) in images">
       <img class="js-draggable c-content-grid__image" :src="element.src" :alt="element.alttext" :key="index" />
-      <div :key="section[index].name" class="c-content-grid__section">
+      <section :key="section[index].name" class="c-content-grid__section">
         <h2 v-text="section[index].name"></h2>
         <div v-html="section[index].content">
         </div>
         <a :href="section[index].url">Read More <span class="u-visually-hidden">About {{section[index].name}}</span></a>
-      </div>
+      </section>
     </template>
   </draggable>
 
