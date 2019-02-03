@@ -27,9 +27,9 @@ export default {
     currentlyDragging: null,
     loggedEvent: '',
     images:
-            [{alttext:'A male typing away at his keyboard.',src:'http://placekitten.com/360/360'},
-            {alttext:'A female enjoying music while she holds her tablet.',src:'http://placekitten.com/361/361'},
-            {alttext:'A female employee being handed a credit card. ',src:'http://placekitten.com/362/362'}],
+            [{alttext:'A male typing away at his keyboard.',src:'/images/Male-Typing-At-Keyboard.jpg'},
+            {alttext:'A female enjoying music while she holds her tablet.',src:'/images/Female-Listening-To-Music.jpg'},
+            {alttext:'A female employee being handed a credit card. ',src:'/images/Female-Employee-With-Credit-Card.jpg'}],
     section: [{name:'Introduction to Habitat'},
               {name: 'Modules'},
               {name: 'Getting Started'}]
