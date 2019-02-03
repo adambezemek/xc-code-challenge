@@ -228,3 +228,27 @@ img[height]
 {
     box-shadow: none;
 }
+
+
+/**
+ * 'Default' link styling css tip: https://twitter.com/nathansmith/status/673925683957993472
+ * 2. Support: User Interface
+ *    Details: In the event text-decoration: underline is used and the text is being overridden by a different color within the link the
+               underline will pick up the default color and not the color of the text that was overridden on pseudo-classes such as :hover.
+ *    Fix: Set the color to currentColor so on :hover, :focus, etc will pick up the currentColor of the text.
+ *
+ */
+ a[href]:not([class]),
+ a[href][class*='fa-']
+ {
+   color: currentColor;
+   text-decoration: none;
+ }
+
+ header a[href]:not([class*='fa-']):hover,
+ header a[href]:not([class*='fa-']):focus,
+ footer a[href]:hover,
+ footer a[href]:focus
+ {
+     text-decoration: underline;
+ }
