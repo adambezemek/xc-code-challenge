@@ -34,5 +34,14 @@ export default {
 </script>
 
 <style>
+.c-skip-nav
+{
+  padding: 0.5rem !important;
+  display: block;
+}
 
+.c-skip-nav:focus
+{
+  border: thick dashed currentColor;
+}
 </style>
