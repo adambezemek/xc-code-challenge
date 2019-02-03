@@ -3,7 +3,7 @@
 
   <draggable class="c-content-grid" :options="{draggable:'.js-draggable'}" @start="drag=true" @end="drag=false">
     <template v-for="(element, index) in images">
-      <img class="js-draggable c-content-grid__header" :src="element.src" :alt="element.alttext" :key="index" />
+      <img class="js-draggable c-content-grid__image" :src="element.src" :alt="element.alttext" :key="index" />
       <div :key="section[index].name" class="c-content-grid__section">
         <h2 v-text="section[index].name"></h2>
         <div v-html="section[index].content">
@@ -50,6 +50,12 @@ export default {
   grid-gap:1rem;
 }
 
+.c-content-grid__image
+{
+  width: 100%;
+  display: block;
+}
+
 @media only screen and (min-width: 48em) {
   .c-content-grid
   {
@@ -57,10 +63,11 @@ export default {
     grid-template-columns: repeat(3, minmax(30%, 360px));
   }
 
-  .c-content-grid__header
+  .c-content-grid__image
   {
     grid-area: 1;
   }
+
   .c-content-grid__section
   {
     grid-area: 2;
