@@ -93,7 +93,7 @@
 
       <div>
         <small>&copy;Copyright 2017, Sitecore. All Rights Reserved<br />
-        "Habitat" as used here is for demonstration purposes only and to represent the software and services provided by Sitecore further described at <a href="https://www.sitecore.net" target="_blank" rel="noopener noreferrer">www.sitecore.net</a>.</small>
+        &ldquo;Habitat&rdquo; as used here is for demonstration purposes only and to represent the software and services provided by Sitecore further described at <a href="https://www.sitecore.net" target="_blank" rel="noopener noreferrer">www.sitecore.net</a>.</small>
       </div>
 
     </footer>
