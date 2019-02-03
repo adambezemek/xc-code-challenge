@@ -1,10 +1,10 @@
 <template>
   <div>
 
-  <draggable class="l-grid l-grid--one-third-columns@TabletPortraitMedium" :options="{draggable:'.js-draggable'}" @start="drag=true" @end="drag=false">
+  <draggable class="c-content-grid" :options="{draggable:'.js-draggable'}" @start="drag=true" @end="drag=false">
     <template v-for="(element, index) in images">
-      <img class="js-draggable l-grid__content--header" :src="element.src" :alt="element.alttext" :key="index" />
-      <div :key="section[index].name" class="l-grid__content--section">
+      <img class="js-draggable c-content-grid__header" :src="element.src" :alt="element.alttext" :key="index" />
+      <div :key="section[index].name" class="c-content-grid__section">
         <h2 v-text="section[index].name"></h2>
         <div v-html="section[index].content">
         </div>
@@ -44,21 +44,27 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
 
-.l-grid {
+.c-content-grid
+{
   display: grid;
   grid-gap:1rem;
 }
 
-
-
 @media only screen and (min-width: 48em) {
-  .l-grid--one-third-columns\@TabletPortraitMedium {
+  .c-content-grid
+  {
     grid-gap:2rem;
     grid-template-columns: repeat(3, minmax(30%, 360px));
   }
 
-  .l-grid__content--header{ grid-area: 1; }
-  .l-grid__content--section{ grid-area: 2; }
+  .c-content-grid__header
+  {
+    grid-area: 1;
+  }
+  .c-content-grid__section
+  {
+    grid-area: 2;
+  }
 }
 
 </style>
