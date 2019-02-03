@@ -13,7 +13,7 @@
      */
 
     --initial-rem-unit: 1rem;
-    --initial-font-family: Rockwell,"Courier Bold",Courier,Georgia,Times,"Times New Roman",serif;
+    --initial-font-family: roboto_slab, Rockwell,"Courier Bold",Courier,Georgia,Times,"Times New Roman",serif;
 
     /* Note: Color names from: http://chir.ag/projects/name-that-color/ */
 
