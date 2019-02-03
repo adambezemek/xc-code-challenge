@@ -12,7 +12,7 @@
           Skip to main content
       </a>
     <header>
-      <ul class="l-social">
+      <ul class="l-social-links">
         <li>
           <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="fab fa-facebook-f">
             <span class="u-visually-hidden">Visit our Facebook page and Like Us</span>
@@ -31,8 +31,23 @@
         </li>
       </ul>
 
-       <!--Habitat Helix Sitecore.net -->
-
+      <ul class="l-sitecore-links">
+        <li>
+          <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+            Habitat
+          </a>
+        </li>
+        <li>
+          <a href="https://example.com" target="_blank" rel="noopener noreferrer">
+            Helix
+          </a>
+        </li>
+        <li>
+          <a href="https://Sitecore.net" target="_blank" rel="noopener noreferrer">
+            Sitecore.net
+          </a>
+        </li>
+      </ul>
       <!-- Mobile Menu -->  <!--Logo--> <!--Navigation --> <!-- World  User  Search Icon -->
     </header>
     <main id="MainContent">
