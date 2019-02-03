@@ -12,7 +12,7 @@
           Skip to main content
       </a>
     <header>
-      <ul class="l-social-links">
+      <ul class="l-social-links o-navigation">
         <li>
           <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="fab fa-facebook-f">
             <span class="u-visually-hidden">Visit our Facebook page and Like Us</span>
@@ -31,7 +31,7 @@
         </li>
       </ul>
 
-      <ul class="l-sitecore-links">
+      <ul class="l-sitecore-links o-navigation">
         <li>
           <a href="https://example.com" target="_blank" rel="noopener noreferrer">
             Habitat
@@ -71,7 +71,7 @@
       </button>
 
       <div id="navigation">
-        <ul>
+        <ul class="o-navigation c-main-navigation">
           <li>
             <a href="https://example.com">
               Home
@@ -106,7 +106,7 @@
       </div>
     </nav>
 
-      <ul class="l-account-options">
+      <ul class="l-account-options o-navigation">
         <li>
           <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="fas fa-globe-asia">
             <span class="u-visually-hidden">Around the world</span>
@@ -166,7 +166,7 @@
       </div>
 
       <nav>
-        <ul>
+        <ul class="o-navigation o-navigation--stacked">
           <li>
             <a href="https://example.com">
               Community
@@ -190,7 +190,7 @@
         </ul>
       </nav>
       <nav>
-        <ul>
+        <ul class="o-navigation o-navigation--stacked">
           <li>
             <a href="https://example.com">
               Best Practice Blogs
@@ -229,7 +229,7 @@
           <span class="region">CA</span>
           <span class="postal-code">94965</span>
           <div class="country-name">USA</div>
-          <div>
+          <div> <!-- Add a margin to this -->
             <span class="fas fa-phone u-rotate--90deg"></span>
             <a href="tel:+14153600600" class="tel">+1 415 360 0600</a>
           </div>
