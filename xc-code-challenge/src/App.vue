@@ -70,8 +70,8 @@
       </ul>
     </header>
     <main id="MainContent">
-      <div>
-        <h1 class="">Sitecore Powered carousel</h1>
+      <div class="c-carousel">
+        <h1 class="">Sitecore Powered</h1>
         <em>Fully Leveraging the power of Sitecore</em>
       </div>
       <ContentGrid class="t-background--primary t-color--accent" />
