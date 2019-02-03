@@ -8,7 +8,7 @@
         <h2 v-text="section[index].name"></h2>
         <div v-html="section[index].content">
         </div>
-        <a :href="section[index].url">Read More</a>
+        <a :href="section[index].url">Read More <span class="u-visually-hidden">About {{section[index].name}}</span></a>
       </div>
     </template>
   </draggable>
