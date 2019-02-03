@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <ContentGrid />
+    <ContentGrid class="t-background--primary t-color--accent" />
   </div>
 </template>
 
