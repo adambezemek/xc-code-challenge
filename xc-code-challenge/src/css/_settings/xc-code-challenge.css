@@ -1,3 +1,11 @@
+/**
+ * IMPORTANT! You have only yourself to blame for not reading this message.
+ *
+ * Only use theme-prefix properties within your CSS.
+ * Adjust the base custom properties and variables values only and then update the t-prefix custom properties to use the base custom properties.
+ */
+
+
 :root {
 
     /**
@@ -6,4 +14,34 @@
 
     --initial-rem-unit: 1rem;
     --initial-font-family: Rockwell,"Courier Bold",Courier,Georgia,Times,"Times New Roman",serif;
+
+    /* Note: Color names from: http://chir.ag/projects/name-that-color/ */
+
+    --pure-white: #fff;
+
+    /**
+    * Support: Accessibility (A11y)
+    * Details: Warning the colors `pickled-bluewoods` & `oxford-blue` may appear the same to those who are color blind.
+    * Supporting Details: Visiting http://www.color-blindness.com/color-name-hue/ and putting the two hex values will
+    *                     return the color `Fiord` which will appear as http://chir.ag/projects/name-that-color/#3A4E5F
+    */
+    --pickled-bluewoods: #354658;
+    --oxford-blue: #3C505C;
+
+    /* `#ddd` has a better contrast ratio than `#7f807f` when used on a dark background. See: https://contrast-ratio.com/#%23ddd-on-%23354b58 vs https://contrast-ratio.com/#%237f807f-on-%23354b58 */
+    --alto-gray: #ddd;
+
+    /* `#5488A6` has a better contrast ratio than `#6996b1` when used on a white background. See https://contrast-ratio.com/#%235488A6-on-%23fff vs https://contrast-ratio.com/#%236996b1-on-%23fff */
+    --wedgewood: #5488A6;
+
+    /**
+     * Theme Custom Properties - Only adjust the variables values to use the base custom properties from above.
+     */
+
+     --t-background-body: var(--pickled-bluewoods);
+     --t-background-primary: var(--pure-white);
+     --t-background-secondary: var(--oxford-blue);
+
+     --t-document-text-color: var(--alto-gray);
+     --t-text-color-accent: var(--wedgewood);
 }
