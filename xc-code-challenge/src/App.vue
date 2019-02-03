@@ -48,7 +48,26 @@
           </a>
         </li>
       </ul>
-      <!-- Mobile Menu -->  <!--Logo--> <!--Navigation --> <!-- World  User  Search Icon -->
+      <!-- Mobile Menu -->  <!--Logo--> <!--Navigation -->
+
+
+      <ul class="l-account-options">
+        <li>
+          <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="fas fa-globe-asia">
+            <span class="u-visually-hidden">Around the world</span>
+          </a>
+        </li>
+        <li>
+          <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="fas fa-user">
+            <span class="u-visually-hidden">User <!--If you are not paying for a product, then you are the product not user--></span>
+          </a>
+        </li>
+        <li>
+          <button type="button" class="fas fa-search">
+            <span class="u-visually-hidden">Search</span>
+          </button>
+        </li>
+      </ul>
     </header>
     <main id="MainContent">
       <div>
