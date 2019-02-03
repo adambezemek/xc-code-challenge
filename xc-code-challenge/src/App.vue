@@ -88,7 +88,7 @@
         </address>
 
         <!-- Phone icon --> +1 415 360 0600
-        <!-- Email icon --> <!-- email link --> sales@sitecore.net
+        <!-- Email icon --> <a href="mailto:sales@sitecore.net">sales@sitecore.net</a>
       </section>
 
       <div>
