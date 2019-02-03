@@ -78,11 +78,14 @@
 
       <section>
         <h6>Contact information</h6>
-        <!-- microformat address -->
         Sitecore Corporation
-        2320 Marinship Way
-        Sausalito, CA 94965
-        USA
+        <address class="adr">
+          <div class="street-address">2320 Marinship Way</div>
+          <span class="locality">Sausalito</span>,
+          <span class="region">CA</span>
+          <span class="postal-code">94965</span>
+          <div class="country-name">USA</div>
+        </address>
 
         <!-- Phone icon --> +1 415 360 0600
         <!-- Email icon --> <!-- email link --> sales@sitecore.net
