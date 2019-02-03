@@ -12,7 +12,26 @@
           Skip to main content
       </a>
     <header>
-     <!-- Facebook Twitter Youtube -->  <!--Habitat Helix Sitecore.net -->
+      <ul class="l-social">
+        <li>
+          <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="fab fa-facebook-f">
+            <span class="u-visually-hidden">Visit our Facebook page and Like Us</span>
+         </a>
+        </li>
+        <li>
+          <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="fab fa-twitter">
+            <span class="u-visually-hidden">Check out our latest tweets on Twitter</span>
+         </a>
+        </li>
+        <li>
+          <!-- It appears the design maybe using an older youtube logo -->
+          <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="fab fa-youtube">
+            <span class="u-visually-hidden">Watch some of our videos on our YouTube Channel</span>
+         </a>
+        </li>
+      </ul>
+
+       <!--Habitat Helix Sitecore.net -->
 
       <!-- Mobile Menu -->  <!--Logo--> <!--Navigation --> <!-- World  User  Search Icon -->
     </header>
