@@ -14,3 +14,21 @@
     height: 1px;
     border: 0;
 }
+
+
+/**
+ * Extends the .u-visually-hidden class to allow the element
+ * to be focusable when navigated to via the keyboard:
+ * https://www.drupal.org/node/897638
+ */
+
+ .u-visually-hidden.u-focusable:active,
+ .u-visually-hidden.u-focusable:focus
+ {
+     clip: auto;
+     height: auto;
+     margin: 0;
+     overflow: visible;
+     position: static;
+     width: auto;
+ }
