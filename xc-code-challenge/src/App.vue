@@ -111,16 +111,52 @@
       </div>
 
       <nav>
-        Community
-        Documentation
-        Knowledge Base
-        Partner Network
+        <ul>
+          <li>
+            <a href="https://example.com">
+              Community
+            </a>
+          </li>
+            <li>
+            <a href="https://example.com">
+              Documentation
+            </a>
+          </li>
+          <li>
+            <a href="https://example.com">
+              Knowledge Base
+            </a>
+          </li>
+          <li>
+            <a href="https://example.com">
+              Partner Network
+            </a>
+          </li>
+        </ul>
       </nav>
       <nav>
-        Best Practice Blogs
-        Business Blogs
-        Technical Blogs
-        <!-- Top border --> Contact Sitecore
+        <ul>
+          <li>
+            <a href="https://example.com">
+              Best Practice Blogs
+            </a>
+          </li>
+            <li>
+            <a href="https://example.com">
+              Business Blogs
+            </a>
+          </li>
+          <li>
+            <a href="https://example.com">
+              Technical Blogs
+            </a>
+          </li>
+          <li>
+            <a href="https://example.com">
+               <!-- Top border --> Contact Sitecore
+            </a>
+          </li>
+        </ul>
       </nav>
 
       <section>
@@ -138,10 +174,18 @@
           <span class="region">CA</span>
           <span class="postal-code">94965</span>
           <div class="country-name">USA</div>
+          <div>
+            <span class="fas fa-phone u-rotate--90deg"></span>
+            <a href="tel:+14153600600" class="tel">+1 415 360 0600</a>
+          </div>
         </address>
 
-        <!-- Phone icon --> +1 415 360 0600
-        <!-- Email icon --> <a href="mailto:sales@sitecore.net">sales@sitecore.net</a>
+       <div>
+            <span class="fas fa-envelope"></span>
+            <a href="mailto:sales@sitecore.net">sales@sitecore.net</a>
+       </div>
+
+
       </section>
 
       <div>
@@ -181,5 +225,10 @@ export default {
 .c-skip-nav:focus
 {
   border: thick dashed currentColor;
+}
+
+.u-rotate--90deg
+{
+  transform: rotate(90deg);
 }
 </style>
