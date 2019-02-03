@@ -45,7 +45,8 @@ html
 
 body
 {
-    background: #fff; /* 1 */
+    background: var(--t-background-body); /* 1 */
+    color: var(--t-document-text-color);
     -webkit-text-size-adjust: 100%; /* 2 */
     -moz-text-size-adjust: 100%; /* 2 */
     -ms-text-size-adjust: 100%; /* 2 */
