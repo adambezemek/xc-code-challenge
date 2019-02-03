@@ -2,6 +2,7 @@ import "@/css/_settings/xc-code-challenge.css";
 import "@/css/base/normalize.css";
 import "@/css/base/base.css";
 import "@/css/base/typography.css";
+import "@/css/objects/navigation.css";
 import "@/css/theme/xc-code-challenge.css";
 import "@/css/components/carousel.css";
 import Vue from 'vue'

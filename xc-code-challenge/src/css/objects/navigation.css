@@ -1,0 +1,45 @@
+/**
+ * Navigation Abstraction
+ * http://csswizardry.com/2011/09/the-nav-abstraction/
+ *
+ * Shared patterns that can be used for navigation, breadcrumbs, etc.
+ * 1. Micro clearfix (Grouped in Clearfix-styles), as per: css-101.org/articles/clearfix/latest-new-clearfix-so-far.php
+ *
+ * Orientation Modifier(s):
+ * .o-navigation--stacked             - Modifies the display of the navigation list to 'display:block' to make the list vertical. Extends '.navigation'.
+ *
+ * Example Usage:
+ * <ul class="o-navigation">
+ *     <li>Crab</li>
+ *     <li>Snail</li>
+ *     <li>Monkey</li>
+ *     <li>Snake</li>
+ *     <li>Cat</li>
+ * </ul>
+ *
+ */
+
+ .o-navigation
+ {
+     padding-left: 0;
+     list-style: none;
+ }
+
+ .o-navigation:after { display: table; clear: both; content: '' /* 1 */; }
+
+ .o-navigation > li,
+ .o-navigation > li > a
+ {
+     display: inline-block;
+ }
+
+ /* ----- (extends navigation orientation) ----- */
+ .o-navigation--stacked > li
+ {
+     display: list-item;
+ }
+
+ .o-navigation--stacked > li > a
+ {
+     display: block;
+ }
