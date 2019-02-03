@@ -1,7 +1,7 @@
 <template>
   <div>
 
-  <draggable class="l-grid l-grid--one-third-columns@TabletPortraitMedium" v-model="images" :options="{draggable:'.js-draggable'}" @start="drag=true" @end="drag=false">
+  <draggable class="l-grid l-grid--one-third-columns@TabletPortraitMedium" :options="{draggable:'.js-draggable'}" @start="drag=true" @end="drag=false">
     <template v-for="(element, index) in images">
       <img class="js-draggable" :class="'l-grid__content--header-'+(index+1)" :src="element.src" :alt="element.alttext" :key="index" />
       <div :key="section[index].name" :class="'l-grid__content--section-'+(index+1)">
