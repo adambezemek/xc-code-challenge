@@ -1,0 +1,11 @@
+.u-link
+{
+    color: currentColor;
+    text-decoration: none;
+}
+
+.u-link:hover,
+.u-link:focus
+{
+    text-decoration: underline;
+}

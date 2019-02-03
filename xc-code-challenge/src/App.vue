@@ -229,7 +229,7 @@
           <div class="country-name">USA</div>
           <div> <!-- Add a margin to this -->
             <span class="fas fa-phone u-rotate--90deg"></span>
-            <a href="tel:+14153600600" class="tel">+1 415 360 0600</a>
+            <a href="tel:+14153600600" class="tel u-link">+1 415 360 0600</a>
           </div>
         </address>
 
