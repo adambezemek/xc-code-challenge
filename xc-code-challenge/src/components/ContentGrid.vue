@@ -54,6 +54,7 @@ export default {
 {
   width: 100%;
   display: block;
+  cursor: grab;
 }
 
 @media only screen and (min-width: 48em) {
