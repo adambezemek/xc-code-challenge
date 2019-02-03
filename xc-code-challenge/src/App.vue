@@ -112,7 +112,7 @@
             <span class="u-visually-hidden">Around the world</span>
           </a>
         </li>
-        <li>
+        <li class=""> <!-- NOTE: Does not appear on mobile -->
           <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="fas fa-user">
             <span class="u-visually-hidden">User <!--If you are not paying for a product, then you are the product not user--></span>
           </a>
@@ -276,6 +276,11 @@ export default {
 </script>
 
 <style>
+
+.c-main-navigation ul
+{
+  display: none;
+}
 
 .c-mobile-menu
 {
