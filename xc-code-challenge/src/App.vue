@@ -11,8 +11,8 @@
       <a href="#MainContent" class="c-skip-nav u-visually-hidden u-focusable t-background--primary t-color--accent">
           Skip to main content
       </a>
-    <header>
-      <ul class="l-social-links o-navigation">
+    <header class="l-header">
+      <ul class="l-header__social-links o-navigation">
         <li>
           <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="fab fa-facebook-f">
             <span class="u-visually-hidden">Visit our Facebook page and Like Us</span>
@@ -31,7 +31,7 @@
         </li>
       </ul>
 
-      <ul class="l-sitecore-links o-navigation">
+      <ul class="l-header__sitecore-links o-navigation">
         <li>
           <a href="https://example.com" target="_blank" rel="noopener noreferrer">
             Habitat
@@ -49,12 +49,12 @@
         </li>
       </ul>
 
-    <a href="/">
+    <a href="/" class="l-header__logo">
       <!-- TODO: Improvement - Get a transparent logo so the background colors don't clash. -->
-      <img src="/images/Habitat-logo.png" alt="Habitat Logo" />
+      <img src="/images/Habitat-logo.png" alt="Habitat Logo" class="l-header__logo-img" />
     </a>
 
-    <nav>
+    <nav class="l-header__navigation">
       <!--
           Support: Accessibility (A11y) & Vue
           Details: Vue reads falsey as 'not needed' so it will remove the attribute all together
@@ -62,7 +62,7 @@
           Additional Details: https://github.com/vuejs/vue/issues/7422
           Fix: Cast the boolean to a string so Vue doesn't remove it.
       -->
-      <button class="c-mobile-menu" type="button" @click="MobileMenuOpen = !MobileMenuOpen"
+      <button class="c-mobile-menu l-header__mobile-menu" type="button" @click="MobileMenuOpen = !MobileMenuOpen"
               aria-label="Menu" aria-controls="navigation" :aria-expanded=MobileMenuOpen.toString()>
         <span class="c-mobile-menu__icon"></span>
         <div class="c-mobile-menu__label">
@@ -70,43 +70,41 @@
         </div>
       </button>
 
-      <div id="navigation">
-        <ul class="o-navigation c-main-navigation">
-          <li>
-            <a href="https://example.com">
-              Home
-            </a>
-          </li>
-          <li>
-            <a href="https://example.com">
-            About Habitat
-            </a>
-            <ul>
-              <li>
-                <a href="https://example.com">Sublink</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="https://example.com">
-              Modules
-            </a>
-            <ul>
-              <li>
-                <a href="https://example.com">Sublink</a>
-              </li>
-            </ul>
-          </li>
-          <li>
-            <a href="https://example.com">
-              More Info
-            </a>
-          </li>
-        </ul>
-      </div>
+      <ul id="navigation" class="o-navigation c-main-navigation l-header__navigation-links">
+        <li>
+          <a href="https://example.com">
+            Home
+          </a>
+        </li>
+        <li>
+          <a href="https://example.com">
+          About Habitat
+          </a>
+          <ul>
+            <li>
+              <a href="https://example.com">Sublink</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="https://example.com">
+            Modules
+          </a>
+          <ul>
+            <li>
+              <a href="https://example.com">Sublink</a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="https://example.com">
+            More Info
+          </a>
+        </li>
+      </ul>
     </nav>
 
-      <ul class="l-account-options o-navigation">
+      <ul class="l-account-options c-account-options o-navigation">
         <li>
           <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="fas fa-globe-asia">
             <span class="u-visually-hidden">Around the world</span>
@@ -124,22 +122,22 @@
         </li>
       </ul>
     </header>
-    <main id="MainContent">
+    <main id="MainContent" class="l-main-content">
       <div class="c-carousel">
         <h1 class="">Sitecore Powered</h1>
         <em>Fully Leveraging the power of Sitecore</em>
       </div>
       <ContentGrid class="t-background--primary t-color--accent" />
     </main>
-    <footer>
-      <div class="t-background--secondary">
-        <section>
+    <footer class="l-footer">
+      <div class="t-background--secondary l-footer__subfooter">
+        <section class="l-subfooter__download">
           <h3>Download Habitat Now!</h3>
           <p>Habitat is available as a Sitecore Package and the sourcecode is available on Github.</p>
           <!--darkbutton styles-->Visit Habitat on Github<!--/darkbutton styles-->
         </section>
 
-        <div>
+        <div class="l-subfooter__quote">
           <img src="" alt="" />
           <!-- border -->
           <blockquote>
@@ -159,13 +157,13 @@
           </blockquote>
         </div>
 
-        <section>
+        <section class="l-subfooter__news">
           <h4>News</h4>
           <a href="https://example.com">Read More <span class="u-visually-hidden">News</span></a>
         </section>
       </div>
 
-      <nav>
+      <nav class="l-footer__site-links">
         <ul class="o-navigation o-navigation--stacked">
           <li>
             <a href="https://example.com">
@@ -189,7 +187,7 @@
           </li>
         </ul>
       </nav>
-      <nav>
+      <nav class="l-footer__blog-links">
         <ul class="o-navigation o-navigation--stacked">
           <li>
             <a href="https://example.com">
@@ -214,13 +212,13 @@
         </ul>
       </nav>
 
-      <section>
+      <section class="l-footer__about">
         <h5>About Habitat</h5>
         <p>Habitat sites are demonstration sites for the Sitecore &reg; Experience Platform&trade;. The sites demonstrate the full set of capabilities and potential of the platform through a number of both technical and business scenarios.</p>
         <!--link button styles ghost -->Example available on Github
       </section>
 
-      <section>
+      <section class="l-footer__contact">
         <h6>Contact information</h6>
         Sitecore Corporation
         <address class="adr">
@@ -243,7 +241,7 @@
 
       </section>
 
-      <div>
+      <div class="l-footer__legal">
         <small>&copy;Copyright 2017, Sitecore. All Rights Reserved<br />
         &ldquo;Habitat&rdquo; as used here is for demonstration purposes only and to represent the software and services provided by Sitecore further described at <a href="https://www.sitecore.net" target="_blank" rel="noopener noreferrer">www.sitecore.net</a>.</small>
       </div>
