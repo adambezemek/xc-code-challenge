@@ -4,6 +4,7 @@ import "@/css/base/base.css";
 import "@/css/base/typography.css";
 import "@/css/objects/navigation.css";
 import "@/css/theme/xc-code-challenge.css";
+import "@/css/layout/layout.css";
 import "@/css/components/skip-navigation.css";
 import "@/css/components/main-navigation.css";
 import "@/css/components/carousel.css";
