@@ -139,14 +139,14 @@
               <!--darkbutton styles-->Visit Habitat on Github<!--/darkbutton styles-->
             </section>
 
-            <div class="l-subfooter__quote">
-              <img src="/images/Anders-Laub-Christoffersen-portrait.jpg" alt="Anders Laub Christoffersen" />
+            <div class="l-subfooter__quote c-quote u-text-center">
+              <img class="c-quote__image" src="/images/Anders-Laub-Christoffersen-portrait.jpg" alt="Anders Laub Christoffersen" />
               <!-- border -->
-              <div>
-                <p>
+              <blockquote class="c-quote__blockquote">
+                <p class="c-quote__quote">
                   [Habitat&hellip;] is nothing less than groundbreaking, it is a real revolution in the way that Sitecored teaches developers to work with their product.
                 </p>
-                <cite class="vcard">
+                <cite class="vcard c-quote__citation">
                   <div class="fn n">
                     <span class="given-name">Anders</span>&nbsp;
                     <span class="additional-name">Laub</span>&nbsp;
@@ -156,7 +156,7 @@
                   <span class="org">Pentia A/S</span>
                 </cite>
 
-              </div>
+              </blockquote>
             </div>
 
             <section class="l-subfooter__news">
@@ -303,6 +303,21 @@ export default {
   {
     display: inline-block !important;
   }
+}
+
+.c-quote__image
+{
+  display: block;
+  margin: 0 auto;
+}
+
+.c-quote__blockquote
+{
+  display: flex;
+  flex-direction: column-reverse;
+  border-top: 1px solid;
+  margin-top: 0;
+  padding-top: 1rem;
 }
 
 </style>
