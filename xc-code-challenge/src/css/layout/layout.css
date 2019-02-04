@@ -29,6 +29,7 @@
 {
     display: grid;
     grid-area: header;
+    grid-template-columns: 70px 1fr 1fr;
     grid-template-areas:
         "main-navigation logo account"
     ;
@@ -36,6 +37,7 @@
 
 @media only screen and (min-width: 48em) {
     .l-header {
+        grid-template-columns: 1fr 3fr;
         grid-template-areas:
             "social-links ..."
             "... sitecore-links"
@@ -47,6 +49,7 @@
 
 @media only screen and (min-width: 80em) {
     .l-header {
+        grid-template-columns: repeat(3, 1fr);
         grid-template-areas:
             "social-links ... ... sitecore-links"
             "logo main-navigation main-navigation account"
