@@ -33,7 +33,7 @@
             </li>
           </ul>
 
-          <ul class="l-header__sitecore-links o-navigation">
+          <ul class="l-header__sitecore-links o-navigation  u-text-right">
             <li>
               <a href="https://example.com" target="_blank" rel="noopener noreferrer">
                 Habitat
@@ -106,7 +106,7 @@
           </ul>
         </nav>
 
-          <ul class="l-account-options c-account-options o-navigation">
+          <ul class="l-account-options c-account-options o-navigation u-text-right">
             <li>
               <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="fas fa-globe-asia">
                 <span class="u-visually-hidden">Around the world</span>
@@ -133,7 +133,7 @@
         </main>
         <footer>
           <div class="t-background--secondary l-subfooter">
-            <section class="l-subfooter__download">
+            <section class="l-subfooter__download u-text-center">
               <h3>Download Habitat Now!</h3>
               <p>Habitat is available as a Sitecore Package and the sourcecode is available on Github.</p>
               <!--darkbutton styles-->Visit Habitat on Github<!--/darkbutton styles-->
@@ -244,7 +244,7 @@
 
             </section>
 
-            <div class="l-footer__legal">
+            <div class="l-footer__legal u-text-center">
               <small>&copy;Copyright 2017, Sitecore. All Rights Reserved<br />
               &ldquo;Habitat&rdquo; as used here is for demonstration purposes only and to represent the software and services provided by Sitecore further described at <a href="https://www.sitecore.net" target="_blank" rel="noopener noreferrer">www.sitecore.net</a>.</small>
             </div>
