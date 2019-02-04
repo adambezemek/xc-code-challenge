@@ -4,6 +4,11 @@
   display: none;
 }
 
+.c-main-navigation li
+{
+  margin-right: 2rem;
+}
+
 .c-mobile-menu
 {
   cursor: pointer;
