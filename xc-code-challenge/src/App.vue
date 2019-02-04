@@ -126,15 +126,15 @@
         </header>
         <main id="MainContent" class="l-main-content">
           <div class="c-carousel">
-            <h1 class="">Sitecore Powered</h1>
-            <em>Fully Leveraging the power of Sitecore</em>
+            <h1 class="u-h1">Sitecore Powered</h1>
+            <em class="u-h6">Fully Leveraging the power of Sitecore</em>
           </div>
           <ContentGrid class="t-background--primary t-color--accent" />
         </main>
         <footer>
           <div class="t-background--secondary l-subfooter">
             <section class="l-subfooter__download u-text-center">
-              <h3>Download Habitat Now!</h3>
+              <h3 class="u-h4">Download Habitat Now!</h3>
               <p>Habitat is available as a Sitecore Package and the sourcecode is available on Github.</p>
               <a href="https://example.com" class="c-link-button c-link-button--dark u-link">Visit Habitat on Github</a>
             </section>
@@ -142,10 +142,10 @@
             <div class="l-subfooter__quote c-quote u-text-center">
               <img class="c-quote__image" src="/images/Anders-Laub-Christoffersen-portrait.jpg" alt="Anders Laub Christoffersen" />
               <blockquote class="c-quote__blockquote">
-                <p class="c-quote__quote">
+                <p class="c-quote__quote u-h6">
                   [Habitat&hellip;] is nothing less than groundbreaking, it is a real revolution in the way that Sitecored teaches developers to work with their product.
                 </p>
-                <cite class="vcard c-quote__citation">
+                <cite class="vcard c-quote__citation u-milli">
                   <div class="fn n">
                     <span class="given-name">Anders</span>&nbsp;
                     <span class="additional-name">Laub</span>&nbsp;
@@ -159,7 +159,7 @@
             </div>
 
             <section class="l-subfooter__news">
-              <h4>News</h4>
+              <h4 class="u-h6">News</h4>
               <a href="https://example.com" class="c-link-button u-link">Read More <span class="u-visually-hidden">News</span></a>
             </section>
           </div>

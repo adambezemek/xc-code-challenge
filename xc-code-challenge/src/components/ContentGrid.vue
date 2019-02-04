@@ -5,7 +5,7 @@
     <template v-for="(element, index) in images">
       <img class="js-draggable c-content-grid__image" :src="element.src" :alt="element.alttext" :key="index" />
       <section :key="section[index].name" class="c-content-grid__section">
-        <h2 v-text="section[index].name"></h2>
+        <h2 v-text="section[index].name" class="u-h6"></h2>
         <div v-html="section[index].content">
         </div>
         <a :href="section[index].url" class="c-link-button u-link">Read More <span class="u-visually-hidden">About {{section[index].name}}</span></a>
