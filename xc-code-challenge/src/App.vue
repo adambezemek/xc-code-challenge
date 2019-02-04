@@ -14,7 +14,7 @@
     <div class="l-global-container">
       <div class="l-global-inner">
         <header class="l-header">
-          <ul class="l-header__social-links o-navigation">
+          <ul class="l-header__social-links o-navigation c__social-links">
             <li>
               <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="fab fa-facebook-f">
                 <span class="u-visually-hidden">Visit our Facebook page and Like Us</span>
@@ -64,7 +64,7 @@
               Additional Details: https://github.com/vuejs/vue/issues/7422
               Fix: Cast the boolean to a string so Vue doesn't remove it.
           -->
-          <button class="c-mobile-menu l-header__mobile-menu" type="button" @click="MobileMenuOpen = !MobileMenuOpen"
+          <button class="c-mobile-menu l-header__mobile-menu t-background--transparent t-border t-border-color--transparent t-color" type="button" @click="MobileMenuOpen = !MobileMenuOpen"
                   aria-label="Menu" aria-controls="navigation" :aria-expanded=MobileMenuOpen.toString()>
             <span class="c-mobile-menu__icon"></span>
             <div class="c-mobile-menu__label">
@@ -118,7 +118,7 @@
               </a>
             </li>
             <li>
-              <button type="button" class="fas fa-search">
+              <button type="button" class="fas fa-search t-background--transparent t-border t-border-color--transparent t-color">
                 <span class="u-visually-hidden">Search</span>
               </button>
             </li>
@@ -283,9 +283,19 @@ export default {
 
 <style>
 
+.c__social-links a
+{
+  padding: 0.75rem;
+}
+
 .c-account-options__my-account
 {
   display: none !important;
+}
+
+.c-account-options a
+{
+  padding: 0.5rem;
 }
 
 @media only screen and (min-width: 48em) {
