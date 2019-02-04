@@ -160,7 +160,7 @@
 
             <section class="l-subfooter__news">
               <h4>News</h4>
-              <a href="https://example.com">Read More <span class="u-visually-hidden">News</span></a>
+              <a href="https://example.com" class="c-link-button u-link">Read More <span class="u-visually-hidden">News</span></a>
             </section>
           </div>
 
@@ -217,7 +217,7 @@
             <section class="l-footer__about">
               <h5>About Habitat</h5>
               <p>Habitat sites are demonstration sites for the Sitecore &reg; Experience Platform&trade;. The sites demonstrate the full set of capabilities and potential of the platform through a number of both technical and business scenarios.</p>
-              <!--link button styles ghost -->Example available on Github
+              <a href="https://example.com" class="c-link-button u-link">Example available on Github</a>
             </section>
 
             <section class="l-footer__contact">
