@@ -141,7 +141,6 @@
 
             <div class="l-subfooter__quote c-quote u-text-center">
               <img class="c-quote__image" src="/images/Anders-Laub-Christoffersen-portrait.jpg" alt="Anders Laub Christoffersen" />
-              <!-- border -->
               <blockquote class="c-quote__blockquote">
                 <p class="c-quote__quote">
                   [Habitat&hellip;] is nothing less than groundbreaking, it is a real revolution in the way that Sitecored teaches developers to work with their product.
@@ -166,8 +165,8 @@
           </div>
 
           <div class="l-footer">
-            <nav class="l-footer__site-links">
-              <ul class="o-navigation o-navigation--stacked">
+            <nav class="l-footer__site-links t-font--system">
+              <ul class="o-navigation o-navigation--stacked c-footer-links">
                 <li>
                   <a href="https://example.com">
                     Community
@@ -190,8 +189,8 @@
                 </li>
               </ul>
             </nav>
-            <nav class="l-footer__blog-links">
-              <ul class="o-navigation o-navigation--stacked">
+            <nav class="l-footer__blog-links t-font--system">
+              <ul class="o-navigation o-navigation--stacked c-footer-links">
                 <li>
                   <a href="https://example.com">
                     Best Practice Blogs
@@ -209,7 +208,7 @@
                 </li>
                 <li>
                   <a href="https://example.com">
-                    <!-- Top border --> Contact Sitecore
+                    Contact Sitecore
                   </a>
                 </li>
               </ul>
@@ -318,6 +317,10 @@ export default {
   border-top: 1px solid;
   margin-top: 0;
   padding-top: 1rem;
+}
+
+.c-footer-links li{
+  margin-bottom: 1rem;
 }
 
 </style>

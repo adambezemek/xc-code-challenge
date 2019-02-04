@@ -160,6 +160,7 @@
 .l-subfooter
 {
     display: grid;
+    grid-gap: 3rem;
     grid-area: subfooter;
     grid-template-columns: 1fr;
     grid-template-areas:
@@ -208,6 +209,7 @@
     .l-footer
     {
         display: grid;
+        grid-gap: 3rem;
         grid-area: footer;
         grid-template-columns: 1fr;
         grid-template-areas:
