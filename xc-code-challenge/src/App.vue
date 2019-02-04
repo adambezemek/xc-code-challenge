@@ -226,7 +226,7 @@
               <address class="adr">
                 <div class="street-address">2320 Marinship Way</div>
                 <span class="locality">Sausalito</span>,
-                <span class="region">CA</span>
+                <span class="region">CA</span>&nbsp;
                 <span class="postal-code">94965</span>
                 <div class="country-name">USA</div>
                 <div> <!-- Add a margin to this -->
