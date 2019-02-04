@@ -8,7 +8,7 @@
         <h2 v-text="section[index].name"></h2>
         <div v-html="section[index].content">
         </div>
-        <a :href="section[index].url">Read More <span class="u-visually-hidden">About {{section[index].name}}</span></a>
+        <a :href="section[index].url" class="c-link-button u-link">Read More <span class="u-visually-hidden">About {{section[index].name}}</span></a>
       </section>
     </template>
   </draggable>
@@ -61,7 +61,7 @@ export default {
 
 .c-content-grid__section h2
 {
-  margin-top: 0;
+  margin: 0;
 }
 
 @media only screen and (min-width: 48em) {
