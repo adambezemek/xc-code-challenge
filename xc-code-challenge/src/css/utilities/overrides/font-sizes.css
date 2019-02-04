@@ -1,0 +1,57 @@
+/**
+ * Headings
+ *
+ * Extra class names allow same font-size to be used on other elements to
+ * maintain the semantically appropriate heading levels
+ *
+ * 1. Responsive Typography: https://madebymike.com.au/writing/precise-control-responsive-typography/
+ * Related: https://www.smashingmagazine.com/2016/05/fluid-typography/
+ */
+
+
+.u-h1
+{
+    font-size: calc(calc(var(--initial-rem-unit) * 3.583) + 0.1vw); /* 1 */
+}
+
+.u-h2
+{
+    font-size: calc(calc(var(--initial-rem-unit) * 2.986) + 0.1vw); /* 1 */
+}
+
+.u-h3
+{
+    font-size: calc(calc(var(--initial-rem-unit) * 2.488) + 0.1vw); /* 1 */
+}
+
+.u-h4
+{
+    font-size: calc(calc(var(--initial-rem-unit) * 1.728) + 0.1vw); /* 1 */
+}
+
+.u-h5
+{
+    font-size: calc(calc(var(--initial-rem-unit) * 1.44) + 0.1vw); /* 1 */
+}
+
+.u-h6
+{
+    font-size: calc(calc(var(--initial-rem-unit) * 1.2) + 0.1vw); /* 1 */
+}
+
+
+/**
+ * Small Print
+ *
+ * A series of classes for setting tiny type; for use in smallprint etc.
+ */
+
+.u-milli
+{
+    font-size: calc(calc(var(--initial-rem-unit) * 0.75) + 0.025vw); /* 1 */
+}
+
+.u-micro
+{
+    font-size: calc(calc(var(--initial-rem-unit) * 0.625) + 0.025vw); /* 1 */
+}

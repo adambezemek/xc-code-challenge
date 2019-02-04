@@ -15,6 +15,7 @@ import "@/css/utilities/overrides/text-alignment.css";
 import "@/css/utilities/overrides/links.css";
 import "@/css/utilities/overrides/visibility.css";
 import "@/css/utilities/overrides/rotation.css";
+import "@/css/utilities/overrides/font-sizes.css";
 import "@/css/utilities/overrides/font-weight.css";
 
 Vue.config.productionTip = false
