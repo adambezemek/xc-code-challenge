@@ -72,7 +72,7 @@
             </div>
           </button>
 
-          <ul id="navigation" class="o-navigation c-main-navigation l-header__navigation-links">
+          <ul id="navigation" class="o-navigation c-main-navigation l-header__navigation-links u-font-weight--bold">
             <li>
               <a href="https://example.com">
                 Home
