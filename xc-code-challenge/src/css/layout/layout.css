@@ -147,7 +147,15 @@
         grid-column: main;
         margin-right: -1rem;
         margin-left: -1rem;
+        padding: 1rem;
     }
+
+    @media only screen and (min-width: 48em) {
+        .l-main-content__main{
+            padding: 3rem;
+        }
+    }
+
 
 .l-subfooter
 {
