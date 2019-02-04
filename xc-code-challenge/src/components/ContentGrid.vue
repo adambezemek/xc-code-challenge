@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="l-main-content__main">
 
   <draggable class="c-content-grid" :options="{draggable:'.js-draggable'}" @start="drag=true" @end="drag=false">
     <template v-for="(element, index) in images">
@@ -48,6 +48,8 @@ export default {
 {
   display: grid;
   grid-gap:1rem;
+  margin-right: auto;
+  margin-left: auto;
 }
 
 .c-content-grid__image

@@ -2,96 +2,256 @@
  * Layout
  */
 
+.l-global-container {
+    display: grid;
+    grid-template-columns: 1rem [inner]1fr 1rem;
+}
+
+.l-global-inner
+{
+    display: grid;
+    grid-column: inner;
+    margin-right: -1rem;
+    margin-left: -1rem;
+    grid-template-areas:
+        "header"
+        "main-content"
+        "subfooter"
+        "footer"
+    ;
+}
+
+.l-header, .l-subfooter, .l-main-content > *, .l-footer{
+    padding: 0 1rem;
+}
+
 .l-header
 {
+    display: grid;
+    grid-area: header;
+    grid-template-areas:
+        "main-navigation logo account"
+    ;
+}
 
+@media only screen and (min-width: 48em) {
+    .l-header {
+        grid-template-areas:
+            "social-links ..."
+            "... sitecore-links"
+            "logo main-navigation"
+            "... account"
+        ;
+    }
+}
+
+@media only screen and (min-width: 80em) {
+    .l-header {
+        grid-template-areas:
+            "social-links ... ... sitecore-links"
+            "logo main-navigation main-navigation account"
+        ;
+    }
 }
 
     .l-header__social-links
     {
+        grid-area: social-links;
+        display: none;
+    }
 
+    @media only screen and (min-width: 48em) {
+        .l-header__social-links
+        {
+            display: block;
+        }
     }
 
     .l-header__sitecore-links
     {
+        grid-area: sitecore-links;
+        display: none;
+    }
 
+    @media only screen and (min-width: 48em) {
+        .l-header__sitecore-links
+        {
+            display: block;
+        }
     }
 
     .l-header__logo
     {
-
+        grid-area: logo;
     }
 
     .l-header__logo-img
     {
-
+        display: block;
     }
 
     .l-header__navigation
     {
-
+        grid-area: main-navigation;
     }
 
         .l-header__mobile-menu
         {
-
+            grid-area: mobile-menu;
         }
+
+        @media only screen and (min-width: 48em) {
+            .l-header__mobile-menu
+            {
+                display: none;
+            }
+        }
+
 
         .l-header__navigation-links
         {
-
+            display: none;
+            grid-area: navigation-links;
         }
+
+        @media only screen and (min-width: 48em) {
+            .l-header__navigation-links
+            {
+                display: block;
+            }
+        }
+
+    .l-account-options
+    {
+        grid-area: account;
+    }
 
 .l-main-content
 {
-
+    grid-area: main-content;
+    display: grid;
+    grid-template-columns:
+    [full-start] minmax(0, 1rem)
+    [main-start] 1fr [main-end]
+    minmax(0, 1rem) [full-end];
 }
 
-.l-footer
+.l-main-content > *
 {
-
+    display: grid;
+    grid-column: full-start/full-end;
 }
 
-    .l-footer__subfooter
+    .l-main-content__main
     {
-
+        grid-column: main;
+        margin-right: -1rem;
+        margin-left: -1rem;
     }
 
-        .l-subfooter__download
-        {
+.l-subfooter
+{
+    display: grid;
+    grid-area: subfooter;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+        "footer-download"
+        "footer-quote"
+        "footer-news"
+    ;
+}
 
+@media only screen and (min-width: 48em) {
+    .l-subfooter {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "footer-download footer-download"
+            "footer-quote footer-news"
+        ;
+    }
+}
+
+@media only screen and (min-width: 80em) {
+    .l-subfooter {
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-areas:
+            "footer-download footer-quote footer-news"
+        ;
+    }
+}
+
+    .l-subfooter__download
+    {
+        grid-area: footer-download;
+    }
+
+    .l-subfooter__quote
+    {
+        grid-area: footer-quote;
+    }
+
+    .l-subfooter__news
+    {
+        grid-area: footer-news;
+    }
+
+
+    .l-footer
+    {
+        display: grid;
+        grid-area: footer;
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "footer-site-links"
+            "footer-blog-links"
+            "footer-about"
+            "footer-contact"
+            "footer-legal"
+        ;
+    }
+
+    @media only screen and (min-width: 48em) {
+        .l-footer {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas:
+                "footer-site-links footer-blog-links"
+                "footer-about footer-contact"
+                "footer-legal footer-legal"
+            ;
         }
+    }
 
-        .l-subfooter__quote
-        {
-
+    @media only screen and (min-width: 80em) {
+        .l-footer {
+            grid-template-columns: 1fr 1fr 2fr 1fr;
+            grid-template-areas:
+                "footer-site-links footer-blog-links footer-about footer-contact"
+                "footer-legal footer-legal footer-legal footer-legal"
+            ;
         }
+    }
 
-        .l-subfooter__news
-        {
-
-        }
 
     .l-footer__site-links
     {
-
+        grid-area: footer-site-links;
     }
 
     .l-footer__blog-links
     {
-
+        grid-area: footer-blog-links;
     }
 
     .l-footer__about
     {
-
+        grid-area: footer-about;
     }
 
     .l-footer__contact
     {
-
+        grid-area: footer-contact;
     }
 
     .l-footer__legal{
-
+        grid-area: footer-legal;
     }
