@@ -159,6 +159,7 @@
         "footer-quote"
         "footer-news"
     ;
+    align-items: center;
 }
 
 @media only screen and (min-width: 48em) {
