@@ -13,7 +13,7 @@
     </a>
     <div class="l-global-container">
       <div class="l-global-inner">
-        <header class="l-header">
+        <header class="l-header t-font--system">
           <ul class="l-header__social-links o-navigation c__social-links">
             <li>
               <a href="https://example.com" target="_blank" rel="noopener noreferrer" class="fab fa-facebook-f">
