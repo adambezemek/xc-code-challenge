@@ -215,21 +215,21 @@
             </nav>
 
             <section class="l-footer__about">
-              <h5>About Habitat</h5>
+              <h5 class="u-h6 u-my1">About Habitat</h5>
               <p>Habitat sites are demonstration sites for the Sitecore &reg; Experience Platform&trade;. The sites demonstrate the full set of capabilities and potential of the platform through a number of both technical and business scenarios.</p>
               <a href="https://example.com" class="c-link-button u-link">Example available on Github</a>
             </section>
 
             <section class="l-footer__contact">
-              <h6>Contact information</h6>
-              Sitecore Corporation
+              <h6 class="u-h6 u-my1">Contact information</h6>
+              <span class="u-font-weight--bold">Sitecore Corporation</span>
               <address class="adr">
                 <div class="street-address">2320 Marinship Way</div>
                 <span class="locality">Sausalito</span>,
                 <span class="region">CA</span>&nbsp;
                 <span class="postal-code">94965</span>
                 <div class="country-name">USA</div>
-                <div> <!-- Add a margin to this -->
+                <div class="u-mt3">
                   <span class="fas fa-phone u-rotate--90deg"></span>
                   <a href="tel:+14153600600" class="tel u-link">+1 415 360 0600</a>
                 </div>
@@ -323,4 +323,15 @@ export default {
   margin-bottom: 1rem;
 }
 
+
+.u-my1
+{
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.u-mt3
+{
+  margin-top: 3rem;
+}
 </style>
