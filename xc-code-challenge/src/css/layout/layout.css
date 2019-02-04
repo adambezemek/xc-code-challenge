@@ -88,6 +88,10 @@
         grid-area: logo;
     }
 
+    .l-header__logo a{
+        display: inline-block;
+    }
+
     .l-header__logo-img
     {
         display: block;

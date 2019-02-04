@@ -50,12 +50,12 @@
               </a>
             </li>
           </ul>
-
-        <a href="/" class="l-header__logo">
-          <!-- TODO: Improvement - Get a transparent logo so the background colors don't clash. -->
-          <img src="/images/Habitat-logo.png" alt="Habitat Logo" class="l-header__logo-img" />
-        </a>
-
+        <div class="l-header__logo">
+          <a href="/">
+            <!-- TODO: Improvement - Get a transparent logo so the background colors don't clash. -->
+            <img src="/images/Habitat-logo.png" alt="Habitat Logo" class="l-header__logo-img" />
+          </a>
+        </div>
         <nav class="l-header__navigation">
           <!--
               Support: Accessibility (A11y) & Vue
