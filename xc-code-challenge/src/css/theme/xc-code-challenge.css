@@ -38,7 +38,7 @@
 
 .t-border-color--transparent
 {
-    border-color: var(--t-border-transparent);
+    border-color: transparent;
 }
 
 /**
