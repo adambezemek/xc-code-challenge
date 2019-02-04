@@ -1,22 +1,22 @@
 /**
  * Theme styling for backgrounds
  */
- .t-background
- {
-     background-color: var(--t-background-body);
- }
+.t-background
+{
+    background-color: var(--t-background-body);
+}
 
- .t-background--primary
- {
-     background-color: var(--t-background-primary);
- }
+.t-background--primary
+{
+    background-color: var(--t-background-primary);
+}
 
- .t-background--secondary
- {
-     background-color: var(--t-background-secondary);
- }
+.t-background--secondary
+{
+    background-color: var(--t-background-secondary);
+}
 
- .t-background--transparent
+.t-background--transparent
 {
     background-color: transparent;
 }
@@ -25,12 +25,12 @@
 /**
  * Theme styling for borders
  */
- .t-border
- {
-     border: 1px solid currentColor;
- }
+.t-border
+{
+    border: 1px solid currentColor;
+}
 
- /**
+/**
  * Support: Accessibility (A11y)
  * Details: Add a transparent border to buttons that have no borders. It makes the buttons more obvious in High Contrast Mode.
  * Supporting Details: https://twitter.com/hassanhelfi/status/931933646394667009
@@ -44,12 +44,17 @@
 /**
  * Theme styling for text color styles
  */
- .t-color
- {
-     color: var(--t-document-text-color);
- }
+.t-color
+{
+    color: var(--t-document-text-color);
+}
 
- .t-color--accent
- {
-     color: var(--t-text-color-accent);
- }
+.t-color--accent
+{
+    color: var(--t-text-color-accent);
+}
+
+.t-font--system
+{
+    font-family: var(--system-fonts);
+}
