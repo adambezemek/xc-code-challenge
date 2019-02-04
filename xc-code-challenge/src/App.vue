@@ -166,7 +166,7 @@
 
           <div class="l-footer">
             <nav class="l-footer__site-links t-font--system">
-              <ul class="o-navigation o-navigation--stacked c-footer-links">
+              <ul class="o-navigation o-navigation--stacked c-footer-links u-font-weight--bold">
                 <li>
                   <a href="https://example.com">
                     Community
@@ -190,7 +190,7 @@
               </ul>
             </nav>
             <nav class="l-footer__blog-links t-font--system">
-              <ul class="o-navigation o-navigation--stacked c-footer-links">
+              <ul class="o-navigation o-navigation--stacked c-footer-links  u-font-weight--bold">
                 <li>
                   <a href="https://example.com">
                     Best Practice Blogs
