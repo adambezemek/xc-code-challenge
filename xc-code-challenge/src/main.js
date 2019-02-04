@@ -8,6 +8,7 @@ import "@/css/layout/layout.css";
 import "@/css/components/skip-navigation.css";
 import "@/css/components/main-navigation.css";
 import "@/css/components/carousel.css";
+import "@/css/components/buttons.css";
 import Vue from 'vue'
 import App from './App.vue'
 import "@/css/utilities/overrides/text-alignment.css";
