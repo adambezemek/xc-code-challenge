@@ -136,7 +136,7 @@
             <section class="l-subfooter__download u-text-center">
               <h3>Download Habitat Now!</h3>
               <p>Habitat is available as a Sitecore Package and the sourcecode is available on Github.</p>
-              <!--darkbutton styles-->Visit Habitat on Github<!--/darkbutton styles-->
+              <a href="https://example.com" class="c-link-button c-link-button--dark u-link">Visit Habitat on Github</a>
             </section>
 
             <div class="l-subfooter__quote c-quote u-text-center">

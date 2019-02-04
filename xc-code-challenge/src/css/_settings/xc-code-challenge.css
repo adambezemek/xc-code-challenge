@@ -28,6 +28,7 @@
     */
     --pickled-bluewoods: #354658;
     --oxford-blue: #3C505C;
+    --shark-black: #2E3135;
 
     /* `#ddd` has a better contrast ratio than `#7f807f` when used on a dark background. See: https://contrast-ratio.com/#%23ddd-on-%23354b58 vs https://contrast-ratio.com/#%237f807f-on-%23354b58 */
     --alto-gray: #ddd;
@@ -42,6 +43,7 @@
      --t-background-body: var(--pickled-bluewoods);
      --t-background-primary: var(--pure-white);
      --t-background-secondary: var(--oxford-blue);
+     --t-background--tertiary: var(--shark-black);
 
      --t-document-text-color: var(--alto-gray);
      --t-text-color-accent: var(--wedgewood);

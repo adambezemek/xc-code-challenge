@@ -1,8 +1,15 @@
 .c-link-button
 {
     padding: 0.5rem;
-    border-radius: 5rem;
+    border-radius: 2rem;
     border: 2px solid;
     display: inline-block;
     font-weight: bold;
+}
+
+.c-link-button--dark
+{
+    background-color: var(--t-background--tertiary);
+    border-color: var(--t-background--tertiary);
+    border-radius: 0.4rem;
 }
