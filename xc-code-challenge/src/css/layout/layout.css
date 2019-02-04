@@ -194,7 +194,7 @@
 
 @media only screen and (min-width: 80em) {
     .l-subfooter {
-        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-columns: 2.5fr 2fr 1fr;
         grid-template-areas:
             "footer-download footer-quote footer-news"
         ;
