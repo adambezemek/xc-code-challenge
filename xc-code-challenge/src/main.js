@@ -10,6 +10,7 @@ import "@/css/components/main-navigation.css";
 import "@/css/components/carousel.css";
 import Vue from 'vue'
 import App from './App.vue'
+import "@/css/utilities/overrides/text-alignment.css";
 import "@/css/utilities/overrides/links.css";
 import "@/css/utilities/overrides/visibility.css";
 import "@/css/utilities/overrides/rotation.css";
