@@ -6,3 +6,8 @@
     flex-direction: column;
     background: #000;
 }
+
+.c-carousel em
+{
+    font-style: normal;
+}
