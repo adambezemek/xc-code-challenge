@@ -34,6 +34,15 @@ $ltgray: #777777;
 $gray: #2e3134;
 $white: #ffffff;
 
+@mixin breakp($point) {
+  @if $point == desktoplg { // 1120px
+    @media (min-width: 70rem) { @content; }
+  }
+  @else if $point == tabletmd { // 600px
+    @media (min-width: 37.5rem)  { @content; }
+  }
+}
+
 body {
   margin: 0;
 }
@@ -41,7 +50,6 @@ body {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
   color: #2c3e50;
   margin-top: 5rem; // see header height
 }
@@ -63,7 +71,27 @@ section {
   &.carousel {
     background: $green;
     color: $white;
-    min-height: 340px;
+    min-height: 220px;
+
+    @include breakp(tabletmd) {
+        min-height: 380px;
+    }
+    @include breakp(desktoplg) {
+        min-height: 440px;
+    }
+
+  }
+
+  &.swapimg {
+    background: $gray;
+
+    img {
+      @include breakp(tabletmd) {
+        max-width: 100px;
+      }
+
+    }
+    
   }
 
   &.callout {

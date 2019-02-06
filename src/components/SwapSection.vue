@@ -1,33 +1,35 @@
 <template>
   <section class="hello">
-    <div>
-      <img :src="photos[0].src"/>
-      <h2>Introduction to Habitat</h2>
-      <p>Sitecore Habitat is a range of sites Sitecore Habitat is a range of sites Sitecore Habitat is a range of sites</p>
-      <p>Sitecore Habitat is a range of sites Sitecore Habitat is a range of sites</p>
-    </div>
-    <div>
-      <img :src="photos[1].src"/>
-      <h2>Modules</h2>
-      <p>Sitecore Habitat is a range of sites Sitecore Habitat is a range of sites</p>
-    </div>
-    <div>
-      <img :src="photos[2].src"/>
-      <h2>Getting Started</h2>
-      <p>Sitecore Habitat is a range of sites Sitecore Habitat is a range of sites</p>
-    </div>
+
+    <draggable v-model="photos">
+      <transition-group>
+        <div class="" v-for="item in photos" :key="item.name">
+          <section class="swapimg">
+            <img :src="item.src"/>
+          </section>
+          <h2>{{ item.name}}</h2>
+            <p>okay</p>
+        </div>
+      </transition-group>
+    </draggable>
+
   </section>
 </template>
 
 <script>
+import draggable from 'vuedraggable'
+
 export default {
   name: 'SwapSection',
+  components: {
+    draggable,
+  },
   data: function () {
     return {
       photos: [
-        { name: 'photo1', src: require('../assets/compguy.jpg') },
-        { name: 'photo2', src: require('../assets/tabletlady.jpg') },
-        { name: 'photo3', src: require('../assets/cardlady.jpg') }
+        { name: 'Introduction to Habitat', src: require('../assets/compguy.jpg') },
+        { name: 'Modules', src: require('../assets/tabletlady.jpg') },
+        { name: 'Getting Started', src: require('../assets/cardlady.jpg') }
 
       ]
 
