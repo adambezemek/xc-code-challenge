@@ -1,6 +1,12 @@
 <template>
   <header class="">
-    <h1>HEADER GOES HERE</h1>
+     <section class="fifty50">
+      <div class="social">Social Icons</div>
+      <div class="links">Habitat | Helix | Sitecore </div>
+    </section>
+    <nav>
+      navigation
+    </nav>
   </header>
 </template>
 

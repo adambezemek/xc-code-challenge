@@ -29,6 +29,7 @@ export default {
 
 <style lang="scss">
 $blue: #354b58;
+$ltblue: #79a0ba;
 $green: #23393b;
 $ltgray: #777777;
 $gray: #2e3134;
@@ -46,16 +47,22 @@ $white: #ffffff;
 body {
   margin: 0;
 }
+* {
+  box-sizing: border-box;
+
+}
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: Georgia, Times, "Times New Roman", serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: #2c3e50;
+  color: $ltblue;
   margin-top: 5rem; // see header height
+  padding: 0;
 }
 img {
   width: 100%;
   height: auto;
+  border-style: none;
 }
 header {
   background: $blue;
@@ -64,14 +71,57 @@ header {
   top: 0;
   height: 5rem;
   width: 100%;
+
+  & > .fifty50 {
+    display: flex;
+    flex-wrap: wrap;
+
+    div {
+      flex: 1 0 200px;
+      padding: .5rem;
+
+      &.social {
+        //
+      }
+      &.links {
+        text-align: right;
+      }
+
+    }
+
+  }
 }
+nav {
+  text-align: center;
+}
+button {
+  border-radius: 1rem;
+  font-size: 1rem;
+  background: transparent;
+  border: 1px solid $ltblue;
+  color: $ltblue;
+  margin-top: 1rem;
+  padding: .5rem 2rem;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+  text-transform: capitalize;
+}
+
 section {
-  padding: 1rem;
+  // padding: .25rem;
 
   &.carousel {
     background: $green;
     color: $white;
     min-height: 220px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    h1 { 
+      font-size: 2rem;
+      font-size: calc(35px + 45 * ((100vw - 768px) / 952));
+      line-height: calc(41px + 45 * ((100vw - 768px) / 952));
+    }
 
     @include breakp(tabletmd) {
         min-height: 380px;
@@ -82,16 +132,40 @@ section {
 
   }
 
-  &.swapimg {
-    background: $gray;
+  &.challenge {
 
-    img {
-      @include breakp(tabletmd) {
-        max-width: 100px;
+    & > div {
+
+      span {
+        padding: 1rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        flex-direction: column;
+        @include breakp(tabletmd) {
+          padding: 2rem;
+          flex-direction: row;
+        }
+        @include breakp(desktoplg) {
+          padding: 3rem;
+          flex-direction: row;
+        }
+
+          .three{
+            padding: .5rem .5rem 1rem;
+            // flex: 1;
+            flex: 1 0 200px;
+
+             @include breakp(tabletmd) {
+              // max-width: 100px;
+              // max-width: calc(33.33333% - 10px);
+              max-width: 33.33%;
+            }
+          }
       }
-
+   
+      
     }
-    
   }
 
   &.callout {
@@ -100,6 +174,19 @@ section {
     min-height: 20rem;
   }
 }
+
+.dragthis {
+  margin-bottom: 1rem;
+
+  h2, p {
+    padding-left: .5rem;
+  }
+
+  button {
+    margin-left: .5rem;
+  }
+}
+
 footer {
   color: $ltgray;
   background: $blue;

@@ -1,14 +1,12 @@
 <template>
-  <section class="hello">
-
+  <section class="challenge">
     <draggable v-model="photos">
       <transition-group>
-        <div class="" v-for="item in photos" :key="item.name">
-          <section class="swapimg">
-            <img :src="item.src"/>
-          </section>
-          <h2>{{ item.name}}</h2>
-            <p>okay</p>
+        <div class="three" v-for="item in photos" :key="item.name">
+          <img :src="item.src"/>
+          <h2>{{ item.name }}</h2>
+          <p>{{ item.moreinfo }}</p>
+          <button>read more</button>
         </div>
       </transition-group>
     </draggable>
@@ -27,9 +25,21 @@ export default {
   data: function () {
     return {
       photos: [
-        { name: 'Introduction to Habitat', src: require('../assets/compguy.jpg') },
-        { name: 'Modules', src: require('../assets/tabletlady.jpg') },
-        { name: 'Getting Started', src: require('../assets/cardlady.jpg') }
+        { 
+          name: 'Introduction to Habitat',
+          moreinfo: 'Sitecore Habitat is a range of sites demontrasting the capabilities of the Sitecore Experience Platform. The solution is built on the Sitecore Helix guidelines, which focuses on increasing productivity and quality in Sitecore projects.', 
+          src: require('../assets/compguy.jpg') 
+        },
+        { 
+          name: 'Modules', 
+          moreinfo: 'The Habitat example implementation has a range of modules which covers the basics of a Sitecore website.', 
+          src: require('../assets/tabletlady.jpg') 
+        },
+        { 
+          name: 'Getting Started', 
+          moreinfo: 'Sitecore Helix a defined methodology with conventions and practises - Habitat ... ', 
+          src: require('../assets/cardlady.jpg') 
+        }
 
       ]
 
