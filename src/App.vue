@@ -1,9 +1,8 @@
 <template>
   <div id="app">
     <PageHeader/>
-    <PageCarousel/>
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg=" I AM A msg as referenced in app.vue"/>
+    <PageCarousel msg="Sitecore Powered!"/>
+    <SwapSection/>
     <PageCallout/>
     <PageFooter msg="Copyright info can maybe go here at the bottom"/>
   </div>
@@ -12,7 +11,7 @@
 <script>
 import PageHeader from './components/PageHeader.vue'
 import PageCarousel from './components/PageCarousel.vue'
-import HelloWorld from './components/HelloWorld.vue'
+import SwapSection from './components/SwapSection.vue'
 import PageCallout from './components/PageCallout.vue'
 import PageFooter from './components/PageFooter.vue'
 
@@ -21,7 +20,7 @@ export default {
   components: {
     PageHeader,
     PageCarousel,
-    HelloWorld,
+    SwapSection,
     PageCallout,
     PageFooter
   }
@@ -29,6 +28,12 @@ export default {
 </script>
 
 <style lang="scss">
+$blue: #354b58;
+$green: #23393b;
+$ltgray: #777777;
+$gray: #2e3134;
+$white: #ffffff;
+
 body {
   margin: 0;
 }
@@ -40,9 +45,13 @@ body {
   color: #2c3e50;
   margin-top: 5rem; // see header height
 }
+img {
+  width: 100%;
+  height: auto;
+}
 header {
-  background: #123456;
-  color: #fff;
+  background: $blue;
+  color: $ltgray;
   position: fixed;
   top: 0;
   height: 5rem;
@@ -52,22 +61,28 @@ section {
   padding: 1rem;
 
   &.carousel {
-    background: #deff00;
-    min-height: 200px;
+    background: $green;
+    color: $white;
+    min-height: 340px;
   }
 
   &.callout {
-    background: #777777;
+    background: lighten($blue, 5%);
+    color: $ltgray;
     min-height: 20rem;
   }
 }
 footer {
-  color: #fff;
-  background: #333333;
+  color: $ltgray;
+  background: $blue;
   min-height: 20rem;
 
   display: flex;
   flex: 1;
   bottom: 0;
+}
+
+@supports (display: grid) {
+  //
 }
 </style>

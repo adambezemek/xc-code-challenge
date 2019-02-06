@@ -1,8 +1,6 @@
 <template>
   <header class="">
-    
     <h1>HEADER GOES HERE</h1>
-   
   </header>
 </template>
 

@@ -2,7 +2,6 @@
   <footer>
     <p>footer content can go here</p>
     <small>{{ msg }}</small>
-  
   </footer>
 </template>
 
