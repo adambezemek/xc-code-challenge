@@ -36,7 +36,18 @@ export default {
   name: 'HelloWorld',
   props: {
     msg: String
-  }
+  },
+  data: function () {
+    return {
+      photos: [
+        { name: 'test1', src: require('../assets/compguy.jpg') },
+        { name: 'test2', src: require('../assets/tabletlady.jpg') },
+        { name: 'test3', src: require('../assets/cardlady.jpg') }
+
+      ]
+
+    }
+  },
 }
 </script>
 
