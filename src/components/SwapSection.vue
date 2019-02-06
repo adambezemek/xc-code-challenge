@@ -3,13 +3,14 @@
     <draggable v-model="photos">
       <transition-group>
         <div class="three" v-for="item in photos" :key="item.name">
-          <img :src="item.src"/>
+          <img class="yawn" :src="item.src"/>
           <h2>{{ item.name }}</h2>
           <p>{{ item.moreinfo }}</p>
           <button>read more</button>
         </div>
       </transition-group>
     </draggable>
+    
 
   </section>
 </template>

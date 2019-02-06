@@ -1,6 +1,11 @@
 <template>
   <section class="callout">
-    <h1>CALLOUT SECTION</h1>
+    <article>
+      <div>hello</div>
+    </article>
+    <article>
+      <div>hello</div>
+    </article>
   </section>
 </template>
 

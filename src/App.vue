@@ -86,9 +86,7 @@ header {
       &.links {
         text-align: right;
       }
-
     }
-
   }
 }
 nav {
@@ -172,6 +170,17 @@ section {
     background: lighten($blue, 5%);
     color: $ltgray;
     min-height: 20rem;
+
+    article {
+      display: flex;
+      flex-wrap: wrap;
+
+      div {
+        flex: 1 0 200px;
+        padding: .5rem;
+
+      }
+    }
   }
 }
 
@@ -191,10 +200,37 @@ footer {
   color: $ltgray;
   background: $blue;
   min-height: 20rem;
-
   display: flex;
+  flex-wrap: wrap;
+
   flex: 1;
   bottom: 0;
+
+  .footfourstack {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    justify-content: space-between;
+    flex-direction: column;
+    width: 100%;
+
+    @include breakp(tabletmd) {
+          padding: 2rem;
+          flex-direction: row;
+        }
+        @include breakp(desktoplg) {
+          padding: 3rem;
+          flex-direction: row;
+        }
+  }
+
+  small {
+    text-align: center;
+    width: 100%;
+    flex: 1;
+    display: flex;
+    bottom: 0;
+  }
 }
 
 @supports (display: grid) {
