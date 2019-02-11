@@ -1,7 +1,7 @@
 import './scss/main.scss';
 
-const dropAreas = Array.from(document.getElementsByClassName('post__figure'))
-let dragImages = Array.from(document.getElementsByClassName('post__img'))
+const dropAreas = Array.from(document.getElementsByClassName('js-dropArea'))
+const dragImages = Array.from(document.getElementsByClassName('js-drag'))
 let srcImg // image being dragged
 let srcArea // area that dragged image originated from
 let swapImg // image to be swapped out for dragged image
@@ -12,7 +12,7 @@ for (let img of dragImages) {
     img.addEventListener('dragstart', (e) => {
         // capture image being dragged
         srcImg = img;
-        srcArea = img.closest('.post__figure');
+        srcArea = img.closest('.js-dropArea');
         img.classList.add('active')
     })
     img.addEventListener('dragend', (e) => {
@@ -26,16 +26,18 @@ for (const area of dropAreas) {
         e.preventDefault()
     })
     area.addEventListener('dragenter', (e) => {
-        // detect dropzone
+        // detect drop area
         e.preventDefault()
         if (area !== srcArea) {
             area.classList.add('active');
         }
     })
     area.addEventListener('dragleave', (e) => {
-        // for exiting the drop box
-        if (e.target.classList.contains('post__figure')) {
-            e.target.classList.remove('active');
+        // for exiting the drop area
+        const { classList } = e.target
+
+        if (classList.contains('js-dropArea')) {
+           classList.remove('active');
         }
     })
     area.addEventListener('drop', (e) => {
