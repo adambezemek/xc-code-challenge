@@ -1,0 +1,41 @@
+$base-color: #79A0B9;
+$secondary-color: #547081;
+
+html {
+    font-size: 10px;
+    color: $base-color;
+}
+
+a,
+article,
+body,
+button,
+div,
+footer,
+h1,
+h2,
+h3,
+header,
+main,
+p,
+section {
+    font-family: 'Bitter', 'Georgia', 'Times New Roman', serif;
+    padding: 0;
+    margin: 0;
+}
+
+h1 {
+    font-size: 4rem;
+}
+
+h2 {
+    font-size: 2.5rem;
+}
+
+p {
+    font-size: 1.8rem;
+}
+
+img {
+    max-width: 100%;
+}

@@ -1,0 +1,20 @@
+@mixin break($min-or-max, $bp1, $bp2: false) {
+    $min-max: "only screen and (min-width: " + $bp1 + ")" + " and " + "(max-width: " + $bp2 + ")";
+    $min: "only screen and (min-width: " + $bp1 + ")";
+    $max: "only screen and (max-width: " + $bp1 + ")";
+    @if $min-or-max == min-max {
+        @media #{$min-max} {
+            @content;
+        }
+    } @else
+    if $min-or-max == min {
+        @media #{$min} {
+            @content;
+        }
+    } @else
+    if $min-or-max == max {
+        @media #{$max} {
+            @content;
+        }
+    }
+}
