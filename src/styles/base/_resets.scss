@@ -1,0 +1,92 @@
+@import "_constants";
+@import "normalize";
+
+
+html {
+    box-sizing: border-box;
+
+    // font-size set to 62.5% so that 1rem = 10px for easy calculations (e.g. 3rem = 30px):
+    font-size: 62.5%;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    font-family: $font-family-default;    // n.b. we are referencing Open Sans via fonts.googleapis.com
+    font-size: 1.7em;                     // using `em` instead of `rem` in body b/c bug in chrome (use `rem` in all other areas)
+    font-weight: normal;
+    color: $font-color-default;
+    line-height: $line-height-default;
+    min-height: 100vh;
+}
+
+
+// -------------------- opinionated (but generic) element overrides: --------------------
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: $font-color-default;
+
+    &:hover {
+        color: $font-color-hover;
+    }
+
+    &:active,
+    &:visited {
+        color: $font-color-default;
+    }
+}
+
+a,
+button,
+input,
+textarea,
+input::-moz-focus-inner,
+button::-moz-focus-inner {
+    outline: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-weight: bold;
+    margin: 0;
+}
+
+strong {
+    font-weight: normal;
+}
+
+i {
+    font-style: normal;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+    vertical-align: baseline;
+}
+
+label,
+figure {
+    margin: 0;
+}
+
+// eva icons:
+i.eva-hover {
+    vertical-align: middle;
+}

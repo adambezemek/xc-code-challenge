@@ -1,0 +1,27 @@
+# unversioned local files:
+local.*
+
+# IDEs:
+.idea/
+.vs/
+.vscode/
+.atom/
+
+# libraries:
+node_modules/
+
+# cached files:
+*.pyc
+.ipynb_checkpoints/
+
+# generated files:
+dist/
+coverage/
+
+# secrets, keys, app info:
+.env
+
+# misc:
+*.css.map
+.directory
+*.log

@@ -1,0 +1,28 @@
+@import "../base/_constants";
+
+// slides in/out of screen:
+.slide {
+    &-next-enter-active,
+    &-next-leave-active,
+    &-prev-enter-active,
+    &-prev-leave-active {
+        transition: transform 500ms ease-in-out;
+    }
+
+    &-next-enter {
+        transform: translate(100%);
+    }
+
+    &-next-leave-to {
+        transform: translate(-100%);
+    }
+
+    &-prev-enter {
+        transform: translate(-100%);
+    }
+
+    &-prev-leave-to {
+        transform: translate(100%);
+
+    }
+}

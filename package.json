@@ -1,0 +1,94 @@
+{
+  "name": "xc-code-challege",
+  "author": "Dee Reddy",
+  "version": "0.1.0",
+  "license": "BSD-2-Clause",
+  "scripts": {
+    "serve": "cross-env NODE_ENV=development nodemon --inspect --watch config --watch src/server src/server/node/server.js --hide-modules",
+    "build": "cross-env NODE_ENV=production webpack --config=config/webpack.prod.js",
+    "start": "cross-env NODE_ENV=production node src/server/node/server.js",
+    "test:unit": "jest --colors --verbose"
+  },
+  "dependencies": {
+    "@babel/core": "^7.3.3",
+    "@babel/preset-env": "^7.3.1",
+    "@babel/runtime": "^7.3.1",
+    "babel-core": "^7.0.0-bridge.0",
+    "babel-loader": "^8.0.5",
+    "babel-minify-webpack-plugin": "^0.3.1",
+    "babel-register": "^6.26.0",
+    "cross-env": "^5.2.0",
+    "css-loader": "^1.0.0",
+    "express": "^4.16.4",
+    "extract-loader": "^3.0.0",
+    "file-loader": "^2.0.0",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.5.0",
+    "moment-timezone": "^0.5.23",
+    "node-sass": "^4.11.0",
+    "optimize-css-assets-webpack-plugin": "^5.0.1",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "vue": "^2.6.6",
+    "vue-eva-icons": "^1.1.0",
+    "vue-loader": "^15.6.2",
+    "vue-router": "^3.0.1",
+    "vue-style-loader": "^4.1.2",
+    "vue-template-compiler": "^2.6.6",
+    "vuex": "^3.1.0",
+    "webpack": "^4.29.5",
+    "webpack-cli": "^3.2.3"
+  },
+  "devDependencies": {
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@vue/test-utils": "^1.0.0-beta.29",
+    "babel-jest": "^24.1.0",
+    "jest": "^24.1.0",
+    "jest-serializer-vue": "^2.0.2",
+    "jest-transform-stub": "^2.0.0",
+    "nodemon": "^1.18.10",
+    "opn": "^5.4.0",
+    "vue-jest": "^3.0.3",
+    "webpack-dev-middleware": "^3.5.2",
+    "webpack-hot-middleware": "^2.24.3"
+  },
+  "jest": {
+    "moduleFileExtensions": [
+      "js",
+      "json",
+      "vue"
+    ],
+    "testMatch": [
+      "**/__tests__/*.spec.(js|ts)"
+    ],
+    "transform": {
+      "^.+\\.js$": "babel-jest",
+      "^.+\\.vue$": "vue-jest",
+      ".+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$": "jest-transform-stub"
+    },
+    "moduleNameMapper": {
+      "^@/(.*)$": "<rootDir>/src/$1"
+    },
+    "snapshotSerializers": [
+      "jest-serializer-vue"
+    ],
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "src/components/**/*.(js|vue)"
+    ],
+    "coveragePathIgnorePatterns": [
+      "src/plugins",
+      "node_modules"
+    ],
+    "coverageReporters": [
+      "text",
+      "html"
+    ]
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 10"
+  ]
+}
