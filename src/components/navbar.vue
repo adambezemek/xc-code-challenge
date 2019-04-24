@@ -18,6 +18,8 @@ nav {
     display: flex;
     align-items: center;
     height: 100%;
+    margin: 0px;
+    padding: 0px;
 
     li {
       margin: 0px 15px;
