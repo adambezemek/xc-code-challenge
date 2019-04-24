@@ -34,8 +34,7 @@ export default {
 @import '../assets/scss/_variables.scss';
 
 .card {
-  margin: 2rem;
-  flex: 1;
+  padding: 1rem;
 
   img {
     width: 100%;
@@ -48,5 +47,15 @@ export default {
   p {
     color: $green;
   }
+}
+
+@media only screen and (min-width: 426px) {
+  .card {
+    flex: 1;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  /* phones */
 }
 </style>

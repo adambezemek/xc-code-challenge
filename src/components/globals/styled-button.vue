@@ -14,5 +14,6 @@ button {
   padding: 0.25rem 0.5rem;
   font-weight: bold;
   font-size: 16px;
+  background-color: white;
 }
 </style>
