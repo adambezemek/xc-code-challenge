@@ -5,8 +5,8 @@
       @dragover.prevent
       @dragenter="acceptDrop($event)"
       @dragstart="$emit('start-drag', imageUrl)"
-      @drop="$emit('dropped')"
-      @dragleave="stopDrop"
+      @drop="stopDrop($event)"
+      @dragleave="stopDrop($event)"
       :class="{dragover: canDrop}"
     >
     <h2>{{ title }}</h2>
@@ -52,7 +52,11 @@ export default {
         this.canDrop = true
       }
     },
-    stopDrop() {
+    stopDrop(event) {
+      console.log(event)
+      if (event.type === 'drop') {
+        this.$emit('dropped')
+      }
       this.canDrop = false
     }
   }
