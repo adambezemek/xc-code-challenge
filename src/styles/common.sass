@@ -1,0 +1,67 @@
+@import './variables'
+
+%flex-row
+  display: flex
+
+%flex-column
+  @extend %flex-row
+  flex-direction: column
+
+%centered-children
+  @extend %flex-row
+  align-items: center
+  justify-content: center
+
+html, body
+  @extend %centered-children
+  background-color: $blue
+  color: $gray
+  font-size: 16px
+  line-height: 32px
+  font-weight: 900
+ul
+  list-style-type: none
+
+a
+  color: $gray
+  text-decoration: none
+
+.column
+  @extend %flex-column
+
+.row
+  @extend %flex-row
+  padding: 0
+  justify-content: space-between
+  margin: 0
+
+.content
+  width: min-content
+  height: min-content
+
+.section
+  @extend %flex-row
+  flex: 1
+
+.btn
+  background-color: transparent
+  border-radius: 30px
+  border: 2px solid $gray
+  color: $gray
+  padding: 0.5rem
+  font-weight: 900
+  width: max-content
+
+.btn-dark
+  border-radius: 8px
+  background-color: $black
+  border-color: $black
+
+.header
+  font-size: 30px
+  font-weight: 900
+
+.minor-header
+  font-size: 24px
+  font-weight: 900
+

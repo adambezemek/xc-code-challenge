@@ -1,25 +1,37 @@
 <template>
-  <div class="full-width center-content">
-    <h1>Hello, Worrrld!</h1>
-    <foo />
+  <div
+    id="Main"
+  >
+    <Navbar />
+    <Carousel />
+    <Info />
+    <Download />
+    <Footer />
   </div>
 </template>
 <script>
-import Foo from './components/Foo.vue'
-
+import Navbar from './components/Navbar.vue'
+import Carousel from './components/Carousel.vue'
+import Info from './components/Info.vue'
+import Download from './components/Download.vue'
+import Footer from './components/Footer.vue'
 export default {
   components: {
-    Foo
+    Navbar,
+    Carousel,
+    Info,
+    Download,
+    Footer
   }
 }
 </script>
-<style scoped lang="sass">
-  .full-width
-    width: 100%
-    background-color: orange
+<style lang="sass">
+@import '../node_modules/normalize-scss'
+@include normalize()
+@import './styles/common'
+@import './styles/variables'
 
-  .center-content
-    display: flex
-    justify-content: center
-    align-items: center
+#Main
+  width: 100%
+  max-width: 1422px
 </style>
