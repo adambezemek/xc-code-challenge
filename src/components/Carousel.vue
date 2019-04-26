@@ -1,11 +1,16 @@
 <template>
   <section
     id="Carousel"
+    class="section"
   >
-    <img
-      src="/../../static/img/carousel-rep.png"
-      alt="Habitat icon"
-    >
+    <div class="column">
+      <div class="big-header">
+        Sitecore Powered!
+      </div>
+      <div class="minor-header">
+        Fully leveraging the power of Sitecore
+      </div>
+    </div>
   </section>
 </template>
 
@@ -19,8 +24,9 @@ export default {
 @import '../styles/common'
 
 #Carousel
-  background-color: #000000
-  img
-    width: 100%
-    height: auto
+  background-color: $green
+  font-family: $font-arial
+  justify-content: space-around
+  .column
+    padding: 0 5%
 </style>

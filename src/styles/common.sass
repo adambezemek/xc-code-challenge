@@ -42,6 +42,9 @@ a
 .section
   @extend %flex-row
   flex: 1
+  padding: 10% 5%
+  @media screen and (max-width: $break-large)
+    padding: 10% 0
 
 .btn
   background-color: transparent
@@ -60,8 +63,22 @@ a
 .header
   font-size: 30px
   font-weight: 900
+  line-height: 30px
 
 .minor-header
   font-size: 24px
   font-weight: 900
+  line-height: 24px
 
+.big-header
+  font-size: 100px
+  font-weight: 900
+  line-height: 100px
+
+.break-container
+  .break-part:last-child
+    flex: 1.3
+  .break-part:first-child
+    flex: 1
+  @media screen and (max-width: $break-large)
+    flex-direction: column

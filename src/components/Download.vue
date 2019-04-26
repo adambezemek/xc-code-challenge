@@ -1,9 +1,9 @@
 <template>
   <section
     id="Download"
-    class="row"
+    class="section break-container"
   >
-    <div class="column">
+    <div class="column break-part">
       <div class="header">
         Download Habitat Now!
       </div>
@@ -12,22 +12,24 @@
         Visit Habitat on Github
       </button>
     </div>
-    <div class="column">
-      <img
-        src="/../../static/img/anders.png"
-        alt="Anders Laub Christofferson"
-      >
-      <div>Anders Laub Christoffersen</div>
-      <div>Sitecore MVP, Pentia A/S</div>
-      <p>[Habitat...] is noting less than groundbreaking, it is a real revolution in the way that Sitecore teaches developers to work with their product.</p>
-    </div>
-    <div class="column">
-      <p class="minor-header">
-        NEWS
-      </p>
-      <button class="btn">
-        Read more
-      </button>
+    <div class="row break-part">
+      <div class="column">
+        <img
+          src="/../../static/img/anders.png"
+          alt="Anders Laub Christofferson"
+        >
+        <div>Anders Laub Christoffersen</div>
+        <div>Sitecore MVP, Pentia A/S</div>
+        <p>[Habitat...] is noting less than groundbreaking, it is a real revolution in the way that Sitecore teaches developers to work with their product.</p>
+      </div>
+      <div class="column">
+        <p class="minor-header">
+          NEWS
+        </p>
+        <button class="btn">
+          Read more
+        </button>
+      </div>
     </div>
   </section>
 </template>
@@ -43,15 +45,16 @@ export default {
 
 #Download
   background-color: $slate-gray
+  .download-part:first-child
+    justify-content: center
+    p
+      width: 75%
   .column
     flex: 1
     align-items: center
-    padding: 1.8rem
+    padding: 10% 5%
     p
       text-align: center
-  .column:first-child
-    margin-left: 15%
-    margin-top: 3rem
   .column:nth-child(2)
     line-height: 2rem
     p

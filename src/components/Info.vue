@@ -141,11 +141,11 @@ export default {
   background-color: $white
   color: $light-blue
   justify-content: space-around
-  padding: 5rem 10rem
   .info-tile
-    margin: 1rem
+    margin: 0 3vmin
     justify-content: space-between
-    width: 22rem
+    width: 10vmin
+    height: min-content
     img
       width: 100%
       height: auto

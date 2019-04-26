@@ -1,53 +1,50 @@
 <template>
-  <div
+  <section
     id="Navbar"
-    class="row"
+    class="section column"
   >
-    <div class="column left">
-      <div class="content">
-        <div>
-          <ul class="row">
-            <li>F</li>
-            <li>U</li>
-            <li>Y</li>
-          </ul>
-        </div>
-        <div class="habitat-icon-container">
-          <img
-            src="../../static/img/habitat-icon.png"
-            alt="Habitat icon"
-          >
-        </div>
-        <div class="habitat-name">
-          HABITAT
-        </div>
+    <div class="row break-container">
+      <div class="row break-part">
+        <ul class="row links">
+          <li>f</li>
+          <li>u</li>
+          <li>y</li>
+        </ul>
       </div>
-    </div>
-    <div class="column middle">
-      <ul class="row">
-        <li><a href="#">HOME</a></li>
-        <li><a href="#">ABOUT HABITAT</a></li>
-        <li><a href="#">MODULES</a></li>
-        <li><a href="#">MORE INFO</a></li>
-      </ul>
-    </div>
-    <div class="column right">
-      <div class="column">
-        <ul class="row">
+      <div class="row break-part">
+        <ul class="row links">
           <li><a href="#">Habitat</a></li>
           <li><a href="#">Helix</a></li>
           <li><a href="#">Sitecore.net</a></li>
         </ul>
       </div>
-      <div class="column">
-        <ul class="row">
+    </div>
+    <div class="row break-container">
+      <div class="row icon-part">
+        <div class="column">
+          <div class="habitat-icon-container">
+            <img
+              src="../../static/img/habitat-icon.png"
+              alt="Habitat icon"
+            >
+          </div>
+        </div>
+        <ul class="row links">
+          <li><a href="#">HOME</a></li>
+          <li><a href="#">ABOUT HABITAT</a></li>
+          <li><a href="#">MODULES</a></li>
+          <li><a href="#">MORE INFO</a></li>
+        </ul>
+      </div>
+      <div class="row break-part">
+        <ul class="row links">
           <li><font-awesome-icon icon="globe" /></li>
           <li><font-awesome-icon icon="user" /></li>
           <li><font-awesome-icon icon="search" /></li>
         </ul>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -59,37 +56,20 @@ export default {
 <style scoped lang="sass">
 @import '../styles/common'
 #Navbar
-  @extend %flex-row
-  justify-content: space-around
-  padding: 1rem
-  font-family: $font-arial
-  .left
-    flex: 1
-    align-items: center
-    .row:first-child
-      margin-bottom: 30px
-    .habitat-icon-container
-      img
-        width: 100%
-    .habitat-name
-      letter-spacing: 13px
-  .middle
-    flex: 2
-    align-items: center
-    justify-content: flex-end
-    margin-bottom: 25px
-    font-weight: $bold-font
-    font-size: 14px
-    .row
-      width: 70%
-  .right
-    flex: 1
-    justify-content: space-between
-    .column:first-child
-      margin-right: 40%
-    .column:last-child
-      margin: 0 40% 25px 0
-      align-items: flex-end
-      *
-        margin-left: 12px
+  padding: 0 5%
+  .break-container
+    padding-bottom: 1rem
+    .break-part:first-child
+      justify-content: flex-start
+      .links
+        li:first-child
+          margin-left: 0
+    .break-part:last-child
+      justify-content: flex-end
+.links
+  width: max-content
+  li
+    margin-left: 4vmin
+.icon-part
+  flex: 2
 </style>
