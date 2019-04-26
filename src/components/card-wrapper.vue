@@ -1,7 +1,7 @@
 <template>
   <div>
     <card
-      v-for="(card, index) in data"
+      v-for="(card, index) in cards"
       :key="index"
       :title="card.title"
       :imageUrl="card.imageUrl"
@@ -65,5 +65,6 @@ export default {
 <style scoped lang="scss">
 div {
   display: flex;
+  flex-wrap: wrap;
 }
 </style>
