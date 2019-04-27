@@ -1,7 +1,7 @@
 <template>
   <section
     id="Download"
-    class="section break-container"
+    class="section break-container-1"
   >
     <div class="column break-part">
       <div class="header">
@@ -12,7 +12,7 @@
         Visit Habitat on Github
       </button>
     </div>
-    <div class="row break-part">
+    <div class="row break-part break-container-2">
       <div class="column">
         <img
           src="/../../static/img/anders.png"

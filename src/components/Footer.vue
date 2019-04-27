@@ -3,9 +3,9 @@
     id="Footer"
     class="section"
   >
-    <div class="row top-content break-container">
+    <div class="row top-content break-container-1">
       <div class="column break-part">
-        <div class="row listed-resources">
+        <div class="row break-container-2 listed-resources">
           <ul class="column">
             <li><a href="#">Community</a></li>
             <li><a href="#">Documentation</a></li>
@@ -20,7 +20,7 @@
           </ul>
         </div>
       </div>
-      <div class="row break-part">
+      <div class="row break-container-2 break-part">
         <div class="column">
           <div class="minor-header">
             About Habitat
@@ -88,6 +88,9 @@ export default {
           height: 45%
           font-family: $font-arial
           text-align: left
+          padding-bottom: 0
+          padding-top: 0
+          margin: 0
       .column
         text-align: left
         .btn

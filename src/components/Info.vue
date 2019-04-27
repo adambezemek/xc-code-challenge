@@ -1,7 +1,7 @@
 <template>
   <section
     id="Info"
-    class="section"
+    class="section break-container-2"
   >
     <div
       v-for="(image, ind) in imageAndInfo"
@@ -16,6 +16,7 @@
         <img
           :src="image.img"
           :alt="image.alt"
+          class="info-tile-image"
           draggable="true"
           :data-ele-location="ind"
           @dragstart="handleDragStart($event, ind)"
@@ -112,11 +113,23 @@ export default {
       this.currentDraggedIndex = dragInd
     },
     /**
+     * removes borders from all images
+     */
+    _clearBorders () {
+      const $images = document.querySelectorAll('.info-tile-image')
+      $images.forEach(($image) => {
+        $image.style.border = ''
+      })
+    },
+    /**
      * handles dragover event, prevents default drag over behaviour
      * @param evt
      */
     handleDragover (evt) {
       evt.preventDefault()
+      const $overEle = evt.toElement
+      this._clearBorders()
+      $overEle.style.border = '10px solid red'
     },
     /**
      * Creates a copy of both the dragged image and the dropped on image
@@ -128,6 +141,7 @@ export default {
       const overEle = evt.toElement.attributes['data-ele-location'].value
       const copiedOver = Object.assign({}, this.dynamicImages[overEle])
       const copiedDragged = Object.assign({}, this.dynamicImages[this.currentDraggedIndex])
+      this._clearBorders()
       this.dynamicImages.splice(this.currentDraggedIndex, 1, copiedOver)
       this.dynamicImages.splice(overEle, 1, copiedDragged)
     }
@@ -142,10 +156,13 @@ export default {
   color: $light-blue
   justify-content: space-around
   .info-tile
-    margin: 0 3vmin
+    margin: 2rem 3vmin
     justify-content: space-between
     width: 10vmin
     height: min-content
+    @media screen and (max-width: $break-medium)
+      width: 100%
+      margin: 2rem 0
     img
       width: 100%
       height: auto
