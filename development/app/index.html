@@ -1,0 +1,187 @@
+<!doctype html>
+
+<html class="no-js" lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>XC Code Challenge - Homepage</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./dist/styles/main.min.css">
+        <link href="https://fonts.googleapis.com/css?family=Bitter:400,700|Open+Sans:400,700" rel="stylesheet">
+        <!-- If the requirements hadn't listed minified assets, I would have inlined the single jQuery "Sortable" line here. -->
+    </head>
+
+    <body>
+        <div id="wrapper">
+            <nav id="nav">
+                <div class="nav-wrapper">
+                    <div class="mini-nav-container">
+                        <ul class="nav-social">
+                            <li><a href="#" class="icon facebook"><span class="label">Facebook</span></a></li>
+                            <li><a href="#" class="icon twitter"><span class="label">Twitter</span></a></li>
+                            <li><a href="#" class="icon youtube"><span class="label">Youtube</span></a></li>
+                        </ul>
+                        <ul class="nav-utility">
+                            <li><a href="#">Habitat</a></li>
+                            <li><a href="#">Helix</a></li>
+                            <li><a href="#">Sitecore.net</a></li>
+                        </ul>
+                    </div>
+                    <div class="main-nav-container">
+                        <div class="nav-left">
+                            <a href="#">
+                                <!-- Example of next-gen images and fall back code. -->
+                                <picture>             
+                                    <source srcset="./src/images/logo.webp" type="image/webp">
+                                    <source srcset="./src/images/logo.jpg" type="image/jpeg"> 
+                                    <img src="./src/images/logo.jpg" alt="Habitat Logo">
+                                </picture>
+                            </a>
+                        </div>
+                        <ul class="nav-center">
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About Habitat</a></li>
+                            <li><a href="#">Modules</a></li>
+                            <li><a href="#">More Info</a></li>
+                        </ul>
+                        <div class="nav-right">
+                            <ul>
+                                <li><a href="#">Globe</a></li>
+                                <li><a href="#">Account</a></li>
+                                <li><a href="#">Search</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div id="carousel-wrapper">
+                <picture>             
+                    <source srcset="./src/images/slide-1.webp" type="image/webp">
+                    <source srcset="./src/images/slide-1.jpg" type="image/jpeg"> 
+                    <img src="./src/images/slide-1.jpg" alt="Sitecore Rocks!">
+                </picture>
+            </div>
+            <main id="main">
+                <div class="column-wrapper">
+                    <!-- 3 Card layout - The requirements specifically said "swap image", but considering this was a code challenge, I assumed best practices to associate images and content together. If this was a client, I would have checked to confirm this.-->
+                    <article>
+                        <div class="card">
+                            <picture>             
+                                <source srcset="./src/images/square-1.webp" type="image/webp">
+                                <source srcset="./src/images/square-1.jpg" type="image/jpeg"> 
+                                <img src="./src/images/square-1.jpg" alt="Intro to Habitat">
+                            </picture>
+                            
+                            <h3>Introduction to Habitat</h3>
+                            <p>Sitecore Habitat is a range of sites demonstrating the capabilities of the Sitecore Experience Platform.</p>
+                            <p>The solution is built on the Sitecore Helix guidelines, which focuses on increasing productivity and quality in Sitecore projects.</p>
+                            <ul class="actions">
+                                <!-- Not much opportunity to demonstrate ADA compliance in this template, but here is one example. -->
+                                <li><a href="#" class="button" aria-label="Read more about Habitat">Read more</a></li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="card">
+                            <picture>             
+                                <source srcset="./src/images/square-2.webp" type="image/webp">
+                                <source srcset="./src/images/square-2.jpg" type="image/jpeg"> 
+                                <img src="./src/images/square-2.jpg" alt="Modules">
+                            </picture>
+                            <h3>Modules</h3>
+                            <p>The Habitat example implementation has a range of modules which covers the basics of a Sitecore website.</p>
+                            <ul class="actions">
+                                <li><a href="#" class="button" aria-label="Read more about Modules">Read more</a></li>
+                            </ul>
+                        </div>
+                    </article>
+                    <article>
+                        <div class="card">
+                            <picture>             
+                                <source srcset="./src/images/square-3.webp" type="image/webp">
+                                <source srcset="./src/images/square-3.jpg" type="image/jpeg"> 
+                                <img src="./src/images/square-3.jpg" alt="Getting Started">
+                            </picture>
+                            <h3>Getting Started</h3>
+                            <p>Sitecore Helix a defined methodology with conventions and practices - Habitat is an example implementation available for your understanding.</p>
+                            <ul class="actions">
+                                <li><a href="#" class="button" aria-label="Read more about getting started">Read more</a></li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </main>
+            <div id="cta-block">
+                <div class="cta-wrapper">
+                    <div class="download-cta">
+                        <h3>Download Habitat Now!</h3>
+                        <p>Habitat is available as a Sitecore Package and the sourcecode is available on Github.</p>
+                        <ul class="actions">
+                            <li> <a href="#" class="button cta-button">Visit Habitat on Github</a></li>
+                        </ul>
+                    </div>
+                    <aside>
+                        <figure>
+                            <picture>             
+                                <source srcset="./src/images/a-christoffersen.webp" type="image/webp">
+                                <source srcset="./src/images/a-christoffersen.jpg" type="image/jpeg"> 
+                                <img src="./src/images/a-christoffersen.jpg" alt="Anders Laub Christoffersen - Sitecore MVP, Pentia A/S">
+                            </picture>
+                            <figcaption>Anders Laub Christoffersen - Sitecore MVP, Pentia A/S</figcaption>
+                        </figure>
+                        <blockquote>[Habitat...] is nothing less than groundbreaking, it is a real revolution in the way that Sitecore teaches developers to work with their product.</blockquote>
+                    </aside> 
+                    <aside>
+                        <h3>News</h3>
+                        <ul class="actions">
+                            <li><a href="#" class="button dimButton">Read more</a></li>
+                        </ul>
+                    </aside>
+                </div>
+            </div>
+            <footer id="footer">
+                <div class="footer-wrapper">
+                    <nav id="footer-nav">
+                        <ul class="col">
+                            <li><a href="#">Community</a></li>
+                            <li><a href="#">Documentation</a></li>
+                            <li><a href="#">Knowledge Base</a></li>
+                            <li><a href="#">Partner Network</a></li>
+                        </ul>
+                        <ul class="col">
+                            <li><a href="#">Best Practice Blogs</a></li>
+                            <li><a href="#">Business Blogs</a></li>
+                            <li><a href="#">Technical Blogs</a></li>
+                            <li><a href="#">Contact Sitecore</a></li>
+                        </ul>
+                    </nav>
+                    <aside>
+                        <h3>About Habitat</h3>
+                        <p>Habitat sites are demonstration sites for the Sitecore<sup>&reg;</sup> Experience Platform<sup>&trade;</sup>. The sites demonstrate the full set of apabilities and potential of the platform through a number of both technical and business scenarios.</p>
+                        <ul class="actions">
+                            <li><a href="#" class="button dimButton">Example available on GitHub</a></li>
+                        </ul>
+                    </aside>
+                    <aside>
+                        <h3>Contact information</h3>
+                        <p class="heavytext">Sitecore Corporation</p>
+                        <p>2320 Marinship Way <br/>
+                            Sausalito, CA 94965 <br/>
+                            USA</p> 
+                            <br/>
+                        <p class="phone-icon">+ 1 415 380 0600</p>
+                        <p class="email-icon">sales@sitecore.net</p>
+                    </aside>
+                </div>
+                <div id="copyright">
+                    <p>&copy; Copyright 2017, Sitecore. All Rights Reserved</p>
+                    <p>"Habitat" as used here is for demonstration purposes only and to represent the software and services provided by Sitecore further descrirbed at <a href="#" target="_blank">www.sitecore.net</a>.</p>
+                </div>
+            </footer>
+        </div> 
+        <script src="https://code.jquery.com/jquery-3.4.0.min.js" integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
+        <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.4.0.min.js"><\/script>')</script>
+        <script src="./dist/scripts/main.min.js"></script>
+    </body>
+</html>
